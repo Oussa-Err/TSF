@@ -12,8 +12,6 @@ import {
 
 import Image from "next/image";
 
-
-
 const Header = () => {
   const [toggle, setToggle] = useState(false);
   const [dropToggle, setDropToggle] = useState(false);
@@ -30,9 +28,7 @@ const Header = () => {
   };
 
   return (
-    <div
-      className="relative z-40 lg:top-0 "
-    >
+    <div className="relative z-40 lg:top-0 ">
       <header className="flex w-full items-start justify-between lg:pl-4 lg:py-4">
         <div className="flex  pl-2 font-extrabold  ">
           <Link href="/">
@@ -48,116 +44,61 @@ const Header = () => {
         <nav className="hidden lg:flex relative w-1/2 gap-3 justify-around text-[1.2rem] opacity-40 font-bold">
           <Link
             href="/"
-            className="hover:text-violet-950 transition-colors duration-300 ease-in-out"
+            className="px-4 pb-2 text-gray-800 hover:underline hover:scale-105"
           >
             Acceuil
           </Link>
-          {dropToggle ? (
-            <Link
-              href=""
-              className="hover:text-violet-950 z-41 relative transition-colors duration-300 ease-in-out"
-              onClick={() => {
-                setDropToggle(false), toggleMenu();
-              }}
-            >
-              TSF foundation
-            </Link>
-          ) : (
-            <Link
-              href=""
-              className="hover:text-violet-950 z-10 relative transition-colors duration-300 ease-in-out"
-              onClick={() => {
-                setDropToggle(true), toggleMenu();
-              }}
-            >
-              TSF foundation
-              {dropToggle ? (
-                <FontAwesomeIcon
-                  className="hover:cursor-pointer animate-bounce  relative left-2"
-                  icon={faCaretUp}
-                  size="1x"
-                  onClick={() => {
-                    setDropToggle(false), toggleMenu();
-                  }}
-                />
-              ) : (
-                <FontAwesomeIcon
+          
+          <div className="relative inline-block group">
+            <button className="px-4 pb-2 text-gray-800 hover:underline hover:scale-105">
+            TSF foundation
+            </button>
+            <div className="hidden group-hover:block absolute min-w-[278px] z-10 pb-4 bg-white rounded-lg shadow-lg">
+              <Link
+                href="/tsf/aboutus"
+                className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white"
+              >
+                Qui sommes Nous?
+              </Link>
+              <Link
+                href="/tsf/organisation"
+                className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white"
+              >
+                Organisation
+              </Link>
+              <Link
+                href="/tsf/gouvernance"
+                className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white"
+              >
+                Gouvernance
+              </Link>
+              <Link
+                href={`/tsf/news`}
+                className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white"
+              >
+                Nos actualités
+              </Link>
+            </div>
+            <FontAwesomeIcon
                   className="hover:cursor-pointer animate-bounce relative left-2"
                   icon={faCaretDown}
                   size="1x"
-                  onClick={() => {
-                    setDropToggle(true), toggleMenu();
-                  }}
                 />
-              )}
-            </Link>
-          )}
-          {dropToggle && (
-            <>
-              <div
-                className="fixed w-screen h-screen inset-0 bg-black bg-opacity-50 font-thin"
-                onClick={() => {
-                  setDropToggle(false), toggleMenu(true);
-                }}
-                ></div>
-              <div
-                className={`menu ${
-                  isMenuOpen ? "active" : ""
-                } lg:absolute top-10 drop-shadow-lg bg-gray-200 rounded-lg p-6 flex flex-col transition-all duration-300 transform ${
-                  dropToggle ? "scale-y-100" : "scale-y-0"
-                } origin-top`}
-              >
-                <Link
-                  href="/tsf/aboutus"
-                  className="hover:text-violet-950 text-gray-800 font-serif relative p-3"
-                  onClick={() => {
-                    setDropToggle(false), toggleMenu(true);
-                  }}
-                >
-                  Qui sommes Nous?
-                </Link>
-                <Link
-                  href="/tsf/organisation"
-                  className="hover:text-violet-950 text-gray-800 font-serif relative p-3"
-                  onClick={() => {
-                    setDropToggle(false), toggleMenu(true);
-                  }}
-                >
-                  Organisation
-                </Link>
-                <Link
-                  href="/tsf/gouvernance"
-                  className="hover:text-violet-950  text-gray-800 font-serif relative p-3"
-                  onClick={() => {
-                    setDropToggle(false), toggleMenu(true);
-                  }}
-                >
-                  Gouvernance
-                </Link>
-                <Link
-                  href={`/tsf/news`}
-                  className="hover:text-violet-950  text-gray-800 font-serif relative p-3"
-                  onClick={() => {
-                    setDropToggle(false), toggleMenu(true);
-                  }}
-                >
-                  Nos actualités
-                </Link>
-              </div>
-            </>
-          )}
-          <Link href="/contact" className="hover:text-violet-950">
+          </div>
+          <Link href="/contact" className="px-4 pb-2 text-gray-800 hover:underline hover:scale-105">
             Contact
           </Link>
         </nav>
-        <div className="lg:hidden flex w-1/2 justify-end pr-5 transition-all ease-in-out duration-150">
+        <div className="lg:hidden flex w-1/2 justify-end pr-5">
           {toggle ? (
             <FontAwesomeIcon
               className="hover:cursor-pointer z-50 "
               icon={faClose}
               color="#black"
               size="2x"
-              onClick={() =>  {setToggle(false), toggleMenu();}}
+              onClick={() => {
+                setToggle(false), toggleMenu();
+              }}
             />
           ) : (
             <FontAwesomeIcon
@@ -165,12 +106,13 @@ const Header = () => {
               icon={faBars}
               color="#black"
               size="2x"
-              onClick={() =>  {setToggle(true), toggleMenu();}}
-
+              onClick={() => {
+                setToggle(true), toggleMenu();
+              }}
             />
           )}
           {toggle && (
-            <div className="bg-slate-700 bg-opacity-50  absolute w-screen h-screen top-0 items-center pl-9 md:pl-0 right-0 z-49 flex md:justify-around md:items-center backdrop-blur-md">
+            <div className="bg-slate-700 bg-opacity-50 pt-10 md:pt-0 absolute w-screen h-screen top-0 items-start pl-9 md:pl-0 right-0 z-49 flex md:justify-around md:items-center backdrop-blur-md">
               <div className="flex flex-col text-slate-900 z-48 gap-10   ">
                 <Link
                   href="/"
@@ -181,7 +123,9 @@ const Header = () => {
                 <Link
                   href="/"
                   className="font-mono font-semibold text-xl hover:text-anchor"
-                  onClick={() => {setToggle(false), toggleMenu()}}
+                  onClick={() => {
+                    setToggle(false), toggleMenu();
+                  }}
                 >
                   Acceuil
                 </Link>
@@ -216,28 +160,36 @@ const Header = () => {
                       <Link
                         href="/tsf/aboutus"
                         className="hover:text-anchor p-3"
-                        onClick={() => {setToggle(false), toggleMenu()}}
+                        onClick={() => {
+                          setToggle(false), toggleMenu();
+                        }}
                       >
                         Qui sommes Nous?
                       </Link>
                       <Link
                         href="/tsf/organisation"
                         className="hover:text-anchor p-3"
-                        onClick={() => {setToggle(false), toggleMenu()}}
+                        onClick={() => {
+                          setToggle(false), toggleMenu();
+                        }}
                       >
                         Organisation
                       </Link>
                       <Link
                         href="/tsf/gouvernance"
                         className="hover:text-anchor p-3"
-                        onClick={() => {setToggle(false), toggleMenu()}}
+                        onClick={() => {
+                          setToggle(false), toggleMenu();
+                        }}
                       >
                         Gouvernance
                       </Link>
                       <Link
                         href={`/tsf/news`}
                         className="hover:text-anchor p-3"
-                        onClick={() => {setToggle(false), toggleMenu()}}
+                        onClick={() => {
+                          setToggle(false), toggleMenu();
+                        }}
                       >
                         Nos actualités
                       </Link>
@@ -247,7 +199,9 @@ const Header = () => {
                 <Link
                   href="/contact"
                   className="font-mono font-semibold text-xl hover:text-anchor"
-                  onClick={() => {setToggle(false), toggleMenu()}}
+                  onClick={() => {
+                    setToggle(false), toggleMenu();
+                  }}
                 >
                   Contact
                 </Link>

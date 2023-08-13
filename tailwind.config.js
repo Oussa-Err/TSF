@@ -8,6 +8,12 @@ module.exports = {
 
   theme: {
     extend: {
+      animation: {
+        'fade-in': {
+          'from': { opacity: '0' },
+          'to': { opacity: '1' },
+        }
+      },
       colors: {
         'heroBg': '#C9CCD5',
         'footerBg': '#4682A9',
