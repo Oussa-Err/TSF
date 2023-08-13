@@ -10,7 +10,7 @@
 
 body {
   word-wrap: break-word;
-  background-image: url('/assets/body-bg-3.jpeg') 
+  background-image: url('/assets/body-bg-3.jpeg') ;
 }
 .caroussel-bg-img {
   background-image: url('/assets/looking.jpg')

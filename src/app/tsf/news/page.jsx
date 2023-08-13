@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default async function News() {
   return (
-    <div className="px-2 sm:px-4 ">
+    <div className="pr-2 sm:pr-4 ">
       <div className="h-28 bg-titlesBg drop-shadow-2xl relative w-screen  md:w-4/5 top-4 sm:-left-16  md:-left-24 lg:-left-32 flex items-center justify-center">
         <h1 className="text-zinc-700 md:text-center font-extrabold text-[2rem] md:text-[3rem] lg:text-[4rem]">Nos actualités</h1>
       </div>
@@ -12,14 +12,12 @@ export default async function News() {
       <div className="my-4">
         <ul className="gap-3 py-10 grid grid-cols-1 md:grid-cols-2 justify-center">
           {news.map((news) => (
-            <li key={news.id}>
+            <li key={news.id} className="flex flex-col pl-2 sm:flex-row gap-7 py-4 backdrop-blur-md">
               <Link
-                href={`/tsf/news/${news.id}`}
-                className="flex flex-row gap-7 py-4 backdrop-blur-md"
-                
+                href={`/tsf/news/${news.id}`}                
               >
                 <Image
-                    className="max-w-[7rem] max-h-[5rem] flex-1 rounded-md transition-all duration-200 hover:scale-105 hover:opacity-50 ease-in-out"
+                    className="max-w-[7rem] max-h-[5rem] flex-1 self-center rounded-md transition-all duration-200 hover:scale-105 hover:opacity-50 ease-in-out"
                     src={news.images[0]}
                     width={700}
                     height={100}

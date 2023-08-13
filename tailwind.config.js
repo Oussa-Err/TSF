@@ -14,7 +14,8 @@ module.exports = {
         'navbar': '#91C8E4',
         'veryTop': '#749BC2',
         'titlesBg': '#EEE0C9',
-        "darkerBg": "#4D4D4D"
+        "darkerBg": "#4D4D4D",
+        'anchor': "#F0B36A"
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
