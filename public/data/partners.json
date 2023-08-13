@@ -1,0 +1,33 @@
+[
+    {
+        "id": 1,
+        "title": "Photoshoots",
+        "imageUrl": "/assets/adfLogo.png"
+    },
+    {
+        "id": 2,
+        "title": "Adventure",
+        "imageUrl": "/assets/parisTech.png"
+    },
+    {
+        "id": 3,
+        "title": "Events",
+        "imageUrl": "/assets/ibtakir-logo.png"
+    },
+    {
+        "id": 4,
+        "title": "Sports",
+        "imageUrl": "/assets/groupe-pont-afrique.png"
+    },
+    {
+        "id": 5,
+        "title": "Sports",
+        "imageUrl": "/assets/stationF-logo.png"
+    },
+    {
+        "id": 6,
+        "title": "Sports",
+        "imageUrl": "/assets/MEN.jpeg   "
+    }
+
+]
