@@ -118,7 +118,7 @@ export default function Contact({}) {
         <label htmlFor="tel" className="text-gray-600 text-xs font-semibold uppercase">Téléphone</label>
 
         <input
-          id="phone"
+          id="telephone"
           type="tel"
           name="_replyto"
           onChange={handleOnChange}
