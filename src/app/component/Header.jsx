@@ -41,10 +41,10 @@ const Header = () => {
             />
           </Link>
         </div>
-        <nav className="hidden lg:flex relative w-1/2 gap-3 justify-between text-[1.2rem] opacity-40 font-bold tracking-[1px] ">
+        <nav className="hidden lg:flex relative w-1/2 gap-3 justify-around text-[1.2rem] opacity-40 font-bold tracking-[1px] ">
           <Link
             href="/"
-            className="px-4 pb-2 text-gray-800 after:content-[''] after:bg-red-900  after:h-[4px] after:w-[0%]  after:left-3 after:bottom-1 after:rounded-xl after:absolute  after:duration-100 after:ease-in hover:scale-105 after:hover:w-[90px]"
+            className="relative px-4 pb-2 text-gray-800 after:content-[''] after:bg-red-900  after:h-[4px] after:w-[0%]  after:left-3 after:bottom-1 after:rounded-xl after:absolute  after:duration-100 after:ease-in hover:scale-105 after:hover:w-[90px]"
           >
             Acceuil
           </Link>
@@ -86,7 +86,7 @@ const Header = () => {
                   size="1x"
                 />
           </div>
-          <Link href="/contact" className="px-4 pb-2 text-gray-800 after:content-[''] after:bg-red-900  after:h-[4px] after:w-[0%]  after:left-3 after:bottom-1 after:rounded-xl after:absolute  after:duration-100 after:ease-in hover:scale-105 after:hover:w-[90px]">
+          <Link href="/contact" className=" relative px-4 pb-2 text-gray-800 after:content-[''] after:bg-red-900  after:h-[4px] after:w-[0%]  after:left-3 after:bottom-1 after:rounded-xl after:absolute  after:duration-100 after:ease-in hover:scale-105 after:hover:w-[90px]">
             Contact
           </Link>
         </nav>
