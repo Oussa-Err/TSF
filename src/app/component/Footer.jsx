@@ -35,8 +35,8 @@ const Footer = () => {
           <div className="flex flex-1 flex-col gap-4">
             <h2 className="text-lg font-extrabold">Contact</h2>
             <hr className="bg-black" />
-            <p>Rabat: 05 36 70 50 59</p>
-            <p>Bhalil: 05 39 39 51 40</p>
+            <p>Rabat: + 212661-178118</p>
+            <p>Bhalil: +33 6 52 80 61 34</p>
             <p>Academy.sciences.TSF@gmail.com</p>
           </div>
         </div>

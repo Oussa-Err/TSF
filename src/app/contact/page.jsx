@@ -115,8 +115,7 @@ export default function Contact({}) {
       <hr className="border-t border-gray-300 my-6" />
 
       <form onSubmit={handleOnSubmit} className='grid gap-y-4 px-4'>
-        <label htmlFor="tel" className="text-gray-600 text-xs font-semibold uppercase">Téléphone</label>
-
+        <label htmlFor="tel" className="text-gray-600 text-xs font-semibold uppercase">Téléphone*</label>
         <input
           id="telephone"
           type="tel"
@@ -127,8 +126,7 @@ export default function Contact({}) {
           className='border border-gray-300 rounded px-2 py-1 transition-all duration-200 focus:outline-none focus:border-blue-500 w-full md:w-auto'
         />
 
-        <label htmlFor="email" className="text-gray-600 text-xs font-semibold uppercase">Email</label>
-
+        <label htmlFor="email" className="text-gray-600 text-xs font-semibold uppercase">Email*</label>
         <input
           id="email"
           type="email"
@@ -139,8 +137,7 @@ export default function Contact({}) {
           className='border border-gray-300 rounded py-1 px-2 transition-all duration-200 focus:outline-none focus:border-blue-500 w-full md:w-auto'
         />
 
-        <label htmlFor="message" className="text-gray-600 text-xs font-semibold uppercase">Message</label>
-
+        <label htmlFor="message" className="text-gray-600 text-xs font-semibold uppercase">Message*</label>
         <textarea
           id="message"
           name="message"

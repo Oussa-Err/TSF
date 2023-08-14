@@ -6,7 +6,7 @@ const NewsLetter = () => {
       </div>
       <div className="flex md:flex-row flex-col items-center gap-3">
         <form action="post">
-          <input type="email" name="your-email" placeholder=" Email"  className='border-2 border-violet-950'/>
+          <input type="email" name="your-email" placeholder=" Email"  className='border-2 focus:border-violet-950 focus:outline-none'/>
         </form>
         <button className="p-3 bg-orange-400 rounded-md hover:scale-105">Subscribe</button>
       </div>
