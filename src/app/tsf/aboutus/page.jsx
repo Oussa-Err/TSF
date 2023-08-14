@@ -83,7 +83,7 @@ const Qui = () => {
             src="/assets/alaoui-reunion.jpeg "
             alt="Men"
             width={500}
-            height={500}
+            height={400}
           />
         </div>
 

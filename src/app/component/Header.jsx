@@ -41,19 +41,20 @@ const Header = () => {
             />
           </Link>
         </div>
-        <nav className="hidden lg:flex relative w-1/2 gap-3 justify-around text-[1.2rem] opacity-40 font-bold">
+        <nav className="hidden lg:flex relative w-1/2 gap-3 justify-between text-[1.2rem] opacity-40 font-bold tracking-[1px] ">
           <Link
             href="/"
-            className="px-4 pb-2 text-gray-800 hover:underline hover:scale-105"
+            className="px-4 pb-2 text-gray-800 after:content-[''] after:bg-red-900  after:h-[4px] after:w-[0%]  after:left-3 after:bottom-1 after:rounded-xl after:absolute  after:duration-100 after:ease-in hover:scale-105 after:hover:w-[90px]"
           >
             Acceuil
           </Link>
           
-          <div className="relative inline-block group">
-            <button className="px-4 pb-2 text-gray-800 hover:underline hover:scale-105">
+          <div className="relative inline-block group transition-all ease-in-out 
+          delay-150 duration-300">
+            <button className="px-4 pb-2 text-gray-800 after:content-[''] after:bg-red-900  after:h-[4px] after:w-[0%]  after:left-3 after:bottom-1 after:rounded-xl after:absolute  after:duration-100 after:ease-in hover:scale-105 after:hover:w-[150px]">
             TSF foundation
             </button>
-            <div className="hidden group-hover:block absolute min-w-[278px] z-10 pb-4 bg-white rounded-lg shadow-lg">
+            <div className="hidden group-hover:block hover:transition-all ease-in-out delay-150 duration-300 absolute min-w-[278px] z-10 pb-4 bg-white rounded-lg shadow-lg">
               <Link
                 href="/tsf/aboutus"
                 className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white"
@@ -85,11 +86,13 @@ const Header = () => {
                   size="1x"
                 />
           </div>
-          <Link href="/contact" className="px-4 pb-2 text-gray-800 hover:underline hover:scale-105">
+          <Link href="/contact" className="px-4 pb-2 text-gray-800 after:content-[''] after:bg-red-900  after:h-[4px] after:w-[0%]  after:left-3 after:bottom-1 after:rounded-xl after:absolute  after:duration-100 after:ease-in hover:scale-105 after:hover:w-[90px]">
             Contact
           </Link>
         </nav>
-        <div className="lg:hidden flex w-1/2 justify-end pr-5">
+
+
+        <div className="lg:hidden flex w-1/2 justify-end pr-5 ">
           {toggle ? (
             <FontAwesomeIcon
               className="hover:cursor-pointer z-50 "
@@ -112,8 +115,8 @@ const Header = () => {
             />
           )}
           {toggle && (
-            <div className="bg-slate-700 bg-opacity-50 pt-10 md:pt-0 absolute w-screen h-screen top-0 items-start pl-9 md:pl-0 right-0 z-49 flex md:justify-around md:items-center backdrop-blur-md">
-              <div className="flex flex-col text-slate-900 z-48 gap-10   ">
+            <div className="bg-slate-700 bg-opacity-50 pt-10 md:pt-0 absolute w-screen h-screen top-0 items-start pl-9 md:pl-0 right-0 z-50 flex md:justify-around md:items-center backdrop-blur-md">
+              <div className="flex flex-col text-slate-900 z-10 gap-10   ">
                 <Link
                   href="/"
                   className="text-2xl py-3 pr-14 pt-10 font-extrabold text-gray-900"
