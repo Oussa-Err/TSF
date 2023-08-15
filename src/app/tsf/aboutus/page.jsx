@@ -69,14 +69,6 @@ const Qui = () => {
               d'une ambition collective pour élever le potentiel du Maroc et de
               l'Afrique sur la scène internationale.
             </p>
-            <p>
-              Les membres et partenaires de la Fondation TSF partagent une
-              vision commune : contribuer à la croissance économique, sociale et
-              technologique du Maroc, et par extension, de l'Afrique entière.
-              Leur dévouement à l'innovation, à la recherche, à l'éducation et à
-              l'impact positif est la pierre angulaire d'une démarche qui
-              transcende les frontières et les disciplines.
-            </p>
           </div>
           <Image
             className="flex-1 md:w-4/5 border-white border-4"

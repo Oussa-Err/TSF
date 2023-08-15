@@ -6,8 +6,8 @@ export default async function New({ params: { id } }) {
     <>
       <div>
         <section>
-          <div className="h-28 bg-titlesBg drop-shadow-2xl relative w-screen  md:w-4/5 top-4 sm:-left-16  md:-left-24 lg:-left-32 flex items-center">
-            <h1 className="text-zinc-700 md:text-center font-extrabold text-[1rem]  pl-3 md:pl-14  md:text-[1rem] lg:text-[2rem]">
+          <div className=" bg-titlesBg drop-shadow-2xl relative w-screen  md:w-4/5 top-4 sm:-left-16  md:-left-24 lg:-left-32 flex items-center">
+            <h1 className="text-zinc-700 md:text-center font-extrabold text-[1rem] p-4 sm:p-8 md:pl-14  md:text-[1rem] lg:text-[2rem]">
               {news[id].title}
             </h1>
           </div>

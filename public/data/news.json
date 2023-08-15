@@ -2,13 +2,22 @@
     {
         "id": 0,
         "images": [
+            "/assets/poster-Partenariat.jpg"
+        ],
+        "title": "Notre Fondation Scientifiques Marocains à l'Etranger Obtient Avantages et Privilèges pour Accueillir et Accompagner ses membres à notre Maison Commune le Maroc",
+        "date": "14 Aout 2023 / TSF Foundation",
+        "description": "Nous sommes ravis de partager avec vous un événement captivant ! Notre Fondation des Scientifiques Marocains à l'Étranger joue un rôle essentiel dans l'établissement de liens privilégiés entre le Maroc et les esprits scientifiques internationaux. Grâce à nos partenariats précieux avec des établissements renommés tels que le Complexe Diamond Vert Fès, l'Hôtel Michlifen Ifrane, et l'Hôtel Sofitel Rabat, ainsi que d'autres établissements de prestige, nos membres ont l'opportunité de vivre une expérience exceptionnelle au Maroc. Profitez d'avantages exclusifs, d'un accompagnement personnalisé, et plongez dans la riche culture marocaine. Nous vous invitons à vous joindre à nous pour un voyage passionnant où la science et la culture se rencontrent, avec d'incroyables opportunités qui se dessinent à l'horizon. De plus, découvrez également notre poster exclusif qui accompagne cet événement exceptionnel !"
+    },
+    {
+        "id": 1,
+        "images": [
             "/assets/invitation-ibtakir.jpeg"
         ],
         "title": "Réunion club Fondateur Bien-Etre",
         "date": "03 Aout 2023 / By TSF Foundation",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, nihil. Amet nulla, eum corporis facilis quae voluptas? Provident, voluptatibus debitis, veniam vero voluptatem unde atque praesentium odio nemo rerum labore!" },
     {
-        "id": 1,
+        "id": 2,
         "images": [
             "/assets/hommage-champion-foot.jpeg"
         ],
@@ -17,7 +26,7 @@
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, nihil. Amet nulla, eum oris facilis quae voluptas? Provident, voluptatibus debitis, veniam vero voluptatem unde atque praesentium odio nemo rerum labore! adipisicing elit. Tempora ea quisquam aliquid, odio deserunt nostrum distinctio! Illo molestias ullam maxime corrupti eos"
     },
     {
-        "id": 2,
+        "id": 3,
         "images": [
             "/assets/service-dla-transition-ecologique.jpeg"
         ],
@@ -26,7 +35,7 @@
         "description": "adipisicing elit. Tempora ea quisquam aliquid, odio deserunt nostrum distinctio! Illo molestias ullam maxime corrupti eos"
     },
     {
-        "id": 3,
+        "id": 4,
         "images": [
             "/assets/ministre-parole.jpeg"
         ],
@@ -35,7 +44,7 @@
         "description": "Rencontre Ministre Benmoussa Chakib et Conseil Scientifique de notre Fondation"
     },
     {
-        "id": 4,
+        "id": 5,
         "images": [
             "/assets/journe-guiguo-3.jpeg",
             "/assets/journé-guiguo-1.jpeg",
@@ -44,14 +53,5 @@
         "title": "Fondation Benghali Chakir Alaoui, a organisé la Journée Scientifique Ecole Guigou",
         "date": "06 Juin 2023 / By TSF Foundation",
         "description": "Bonjour de l'école de Guigou, Ce Samedi 24 juin à 10H30 a commencé la journée Scientifique Ecole de Guigou : - Discours des 3 Directeurs Provincial My Elhassan Oubaidi, Actuel Younes El Jamali et l'ancien Directeur Mr Mrabet. Le Directeur Provincial a cité les Souvenirs inoubliables de Feu le Directeur My Abderrahmane Kamal, qui distribuait des Aides- Lecture par les enfants  de la Fatiha au nom de Feu le Directeur My Abderrahmane Kamal - Distribution des cadeaux aux enfants méritant qui ont les meilleures moyennes. - La Fondation Benghali Chakir Alaoui a distribué  les Cadeaux à 30 élèves les meilleurs - Présentation aux enseignants et aux familles du Projet Africa Digital Farming School pour apprendre aux enfants et adultes les innovations technologiques en Agriculture."
-    },
-    {
-        "id": 5,
-        "images": [
-            "/assets/service-dla-transition-ecologique.jpeg"
-        ],
-        "title": "Réunion club Fondateur Bien-Etre",
-        "date": "03 Aout 2021 / TSF Foundation",
-        "description": "Rencontres Diaspora Été 2023, adipisicing elit. Tempora ea quisquam aliquid, odio deserunt nostrum distinctio! Illo molestias ullam maxime corrupti eos"
     }
 ]

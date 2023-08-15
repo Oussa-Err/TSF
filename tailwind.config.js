@@ -22,6 +22,7 @@ module.exports = {
         'titlesBg': '#EEE0C9',
         'darkerBg': '#4D4D4D',
         'anchor': '#F0B36A',
+        'btn-red': '#c50227'
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
