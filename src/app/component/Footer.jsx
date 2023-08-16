@@ -36,7 +36,7 @@ const Footer = () => {
             <h2 className="text-lg font-extrabold">Contact</h2>
             <hr className="bg-black" />
             <p>Rabat: + 212661-178118</p>
-            <p>Bhalil: +33 6 52 80 61 34</p>
+            <p>Paris: +33 6 52 80 61 34</p>
             <p>Academy.sciences.TSF@gmail.com</p>
           </div>
         </div>
