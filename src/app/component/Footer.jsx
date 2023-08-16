@@ -19,7 +19,7 @@ const Footer = () => {
             <hr className="bg-black" />
             <p>
               TSF Fondation du Maroc – 81, Avenue Allal Ben Abdellah Hassane -
-              Rabat <br/> 199, Av. Ibn Sina, 31000 - Sefrou
+              Rabat <br/> ET <br/>199, Av. Ibn Sina, 31000 - Sefrou
             </p>
             <p>
               TSF Fondation du France – 55, Bd Vincent Auriol, 75013 Paris –
@@ -35,7 +35,7 @@ const Footer = () => {
           <div className="flex flex-1 flex-col gap-4">
             <h2 className="text-lg font-extrabold">Contact</h2>
             <hr className="bg-black" />
-            <p>Rabat: + 212661-178118</p>
+            <p>Rabat: +212 661-178118</p>
             <p>Paris: +33 6 52 80 61 34</p>
             <p>Academy.sciences.TSF@gmail.com</p>
           </div>

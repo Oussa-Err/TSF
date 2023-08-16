@@ -119,7 +119,7 @@ const Header = () => {
               <div className="flex flex-col text-slate-900 z-10 gap-10   ">
                 <Link
                   href="/"
-                  className="text-2xl py-3 pr-14 pt-10 font-extrabold text-gray-900"
+                  className="text-2xl py-3 pr-14 pt-10 font-extrabold text-white"
                 >
                   TRINATIONAL SCIENTIFIQUE FOUNDATION
                 </Link>
@@ -133,7 +133,7 @@ const Header = () => {
                   Acceuil
                 </Link>
                 <div
-                  className="relative z-10 font-mono font-semibold text-xl hover:text-anchor hover:cursor-pointer"
+                  className="relative z-10 font-mono font-bold text-xl hover:text-anchor hover:cursor-pointer"
                   onClick={() => setDropToggle(!dropToggle)}
                 >
                   TSF foundation
@@ -201,7 +201,7 @@ const Header = () => {
                 )}
                 <Link
                   href="/contact"
-                  className="font-mono font-semibold text-xl hover:text-anchor"
+                  className="font-mono font-bold text-xl hover:text-anchor"
                   onClick={() => {
                     setToggle(false), toggleMenu();
                   }}

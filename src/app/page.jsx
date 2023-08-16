@@ -4,10 +4,8 @@ import news from "../../public/data/news.json";
 import Slide from "./component/Swiper";
 // import { motion, AnimatePresence } from "framer-motion"
 
-
-export default function Home({ }) {
+export default function Home({}) {
   return (
-
     // <AnimatePresence>
     //     <motion.div
     //         className='slide-in absolute top-0 left-0 w-full h-screen bg-slate-700 origin-bottom'
@@ -16,21 +14,20 @@ export default function Home({ }) {
     //         exit={{scaleY: 1}}
     //         transition={{duration: 1, ease: [0.22, 1, 0.36, 1]}}
     //     />
-        
 
-        
     <main className="bg-gradient-to-b from-footerBg to-white rounded-tr-lg rounded-tl-lg overflow-hidden">
       <div className="flex flex-col">
-        <div className="lg:flex-row  flex  flex-col">
-          <div className="bg-footerBg w-full flex flex-col flex-1 justify-center">
-            <h1 className="font-extrabold text-2xl sm:text-3xl pt-4 lg:pt-0 lg:text-4xl px-5 text-white">
-            Fondation TSF:  <br />
+        <div className="xl:flex-row  flex  flex-col">
+          <div className="bg-footerBg w-full flex flex-col flex-1 justify-center py-10">
+            <h1 className="font-extrabold text-2xl sm:text-3xl pt-4 lg:pt-0 lg:text-4xl px-5  text-white">
+              Fondation TSF: <br />
               <span className="text-white">
-              Pionniers de l'Innovation et de la Collaboration Globale
+                Pionniers de l'Innovation et de la Collaboration Globale
               </span>
             </h1>
             <p className="p-5  text-white">
-            Rejoignez-nous dans notre quête pour un Maroc plus fort grâce à la science et à l'expertise internationale.
+              Rejoignez-nous dans notre quête pour un Maroc plus fort grâce à la
+              science et à l'expertise internationale.
             </p>
           </div>
           <Image
@@ -44,20 +41,24 @@ export default function Home({ }) {
 
         <div>
           <p className="md:text-center p-7 font-thin bg-slate-50 text-lg text-gray-700 pb-8 px-4">
-            La Fondation TSF <span className="font-bold text-orange-700"> Fondation des Scientifiques Marocains à
-            l'Etranger </span> incarne l'esprit d'innovation, d'expertise et
-            d'engagement des scientifiques, chercheurs, professeurs, experts,
-            bâtisseurs et entrepreneurs qui se consacrent avec dévouement aux
-            défis complexes du Maroc et de l'Afrique. Ces esprits brillants font
-            face avec détermination aux formidables enjeux de notre temps, de
-            l'innovation dans toutes les sphères de l'activité humaine à la
-            création d'une ville durable, connectée et accessible.
+            La Fondation TSF{" "}
+            <span className="font-bold text-orange-700">
+              {" "}
+              Fondation des Scientifiques Marocains à l'Etranger{" "}
+            </span>{" "}
+            incarne l'esprit d'innovation, d'expertise et d'engagement des
+            scientifiques, chercheurs, professeurs, experts, bâtisseurs et
+            entrepreneurs qui se consacrent avec dévouement aux défis complexes
+            du Maroc et de l'Afrique. Ces esprits brillants font face avec
+            détermination aux formidables enjeux de notre temps, de l'innovation
+            dans toutes les sphères de l'activité humaine à la création d'une
+            ville durable, connectée et accessible.
           </p>
           <div className="h-3 bg-slate-600"></div>
         </div>
       </div>
 
-      <div className="px-2 sm:px-4" >
+      <div className="px-2 sm:px-4">
         <h1 className="text-slate-900 font-extrabold text-2xl pt-11">
           Nos actualités
         </h1>
