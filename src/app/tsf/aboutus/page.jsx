@@ -92,7 +92,7 @@ const Qui = () => {
               une empreinte positive sur le continent africain dans son
               ensemble. Notre dévouement à l'innovation, à la recherche, à
               l'éducation et à l'impact positif transcende les barrières
-              géographiques et disciplinaires.
+              géographiques et disciplinaires. 
             </p>
           </div>
         </div>
