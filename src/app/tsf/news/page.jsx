@@ -34,15 +34,17 @@ export default async function News() {
                 <p className="lg:px-20 mt-5 font-bold text-blue-950 text-xl">
                   {news.title}
                 </p>
-                <p className="lg:px-28 mt-10 font-mono text-slate-600">
+                <p className="lg:px-24 mt-10 font-mono text-slate-600">
                   {news.description.slice(0, 150) + "...."}
                 </p>
-              <Link href={`/tsf/news/${news.id}`}>
-                <button className="lg:mx-20 mt-2 bg-btn-red text-white h-16 w-28 hover:bg-slate-600 hover:scale-105
-                transition-all duration-200 ease-in-out">
-                  Lire plus
-                </button>
-              </Link>
+                <Link href={`/tsf/news/${news.id}`}>
+                  <button
+                    className="lg:mx-20 mt-2 bg-btn-red text-white h-16 w-28 hover:bg-slate-600 hover:scale-105
+                transition-all duration-200 ease-in-out"
+                  >
+                    Lire plus
+                  </button>
+                </Link>
               </div>
             </li>
           ))}
