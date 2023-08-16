@@ -33,7 +33,7 @@ export default async function New({ params: { id } }) {
             <li className="text-center">
               <small >{news[id].date}</small>
             </li>
-            <li className="text-center">
+            <li className="px-3 md:text-center">
               <p>{news[id].description}</p>
             </li>
           </ul>

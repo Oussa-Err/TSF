@@ -17,7 +17,7 @@ const Qui = () => {
             width={500}
             height={500}
           />
-          <div className="flex-1 p-8">
+          <div className="flex-1 p-8 pt-0">
             <h1 className="text-[2rem] font-extrabold py-4">
               Au cœur de sa mission
             </h1>
@@ -72,7 +72,7 @@ const Qui = () => {
           </div>
           <Image
             className="flex-1 md:w-4/5 border-white border-4"
-            src="/assets/alaoui-reunion.jpeg "
+            src="/assets/alaoui-reunion.jpeg"
             alt="Men"
             width={500}
             height={400}
@@ -81,7 +81,7 @@ const Qui = () => {
 
         <div className="flex flex-col justify-center items-center mt-4 ">
           <div className="md:w-2/4 relative bottom-0 bg-white p-8 pt-4 md:rounded-lg">
-            <h1 className="text-[2rem] text-center font-extrabold pt-4">
+            <h1 className="text-[1.5rem] md:text-[2rem] text-center font-extrabold pt-4">
               Notre Vision pour l'Avenir
             </h1>
             <div className="h-1 bg-orange-500 rounded-lg mb-4"></div>
