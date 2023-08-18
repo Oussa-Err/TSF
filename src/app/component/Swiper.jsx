@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import partners from "../../../public/data/partners.json";
-import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
@@ -27,7 +26,6 @@ export const Slide = () => {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className=""
       >
         {partners.map((partner, index) => (
           <SwiperSlide key={index} className="">
@@ -45,10 +43,4 @@ export const Slide = () => {
   );
 }
 
-// const breakPoints = [
-//   { width: 1, itemsToShow: 1 },
-//   { width: 550, itemsToShow: 1 },
-//   { width: 768, itemsToShow: 2 },
-//   { width: 1200, itemsToShow: 3 },
-// ];
 export default Slide

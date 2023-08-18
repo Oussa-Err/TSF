@@ -29,11 +29,11 @@ const Header = () => {
 
   return (
     <div className="relative z-40 lg:top-0 ">
-      <header className="flex w-full items-start justify-between lg:pl-4 lg:py-4">
+      <header className="flex w-full items-start gap-10 lg:pl-4 lg:py-4">
         <div className="flex  pl-2 font-extrabold  ">
           <Link href="/">
             <Image
-              className="object-cover flex-1"
+              className="object-cover min-w-[10rem]"
               src="/assets/tsf-logo.png"
               alt="adf logo"
               width={300}
@@ -41,7 +41,7 @@ const Header = () => {
             />
           </Link>
         </div>
-        <nav className="hidden lg:flex relative w-1/2 gap-3 justify-around text-[1.2rem] opacity-40 font-bold tracking-[1px] ">
+        <nav className="hidden lg+:flex relative gap-5 text-[1.2rem] opacity-40 font-bold tracking-[1px] ">
           <Link
             href="/"
             className="relative px-4 pb-2 text-gray-800 after:content-[''] after:bg-red-900  after:h-[4px] after:w-[0%]  after:left-3 after:bottom-1 after:rounded-xl after:absolute  after:duration-100 after:ease-in hover:scale-105 after:hover:w-[90px]"
@@ -81,7 +81,7 @@ const Header = () => {
               </Link>
             </div>
             <FontAwesomeIcon
-                  className="hover:cursor-pointer animate-bounce relative left-2"
+                  className="hover:cursor-pointer animate-bounce relative -left-2"
                   icon={faCaretDown}
                   size="1x"
                 />
@@ -89,13 +89,19 @@ const Header = () => {
           <Link href="/contact" className=" relative px-4 pb-2 text-gray-800 after:content-[''] after:bg-red-900  after:h-[4px] after:w-[0%]  after:left-3 after:bottom-1 after:rounded-xl after:absolute  after:duration-100 after:ease-in hover:scale-105 after:hover:w-[90px]">
             Contact
           </Link>
+          <Link href="/register" className=" relative px-4 pb-2 text-gray-800 after:content-[''] after:bg-red-900  after:h-[4px] after:w-[0%]  after:left-3 after:bottom-1 after:rounded-xl after:absolute  after:duration-100 after:ease-in hover:scale-105 after:hover:w-[90px]">
+            S'inscrire
+          </Link>
+          <Link href="/login" className=" relative px-4 pb-2 text-gray-800 after:content-[''] after:bg-red-900  after:h-[4px] after:w-[0%]  after:left-3 after:bottom-1 after:rounded-xl after:absolute  after:duration-100 after:ease-in hover:scale-105 after:hover:w-[90px]">
+            S'identifier
+          </Link>
         </nav>
 
 
-        <div className="lg:hidden flex w-1/2 justify-end pr-5 ">
+        <div className="lg+:hidden flex w-full justify-end pr-5 ">
           {toggle ? (
             <FontAwesomeIcon
-              className="hover:cursor-pointer z-50 "
+              className="hover:cursor-pointer relative z-50 "
               icon={faClose}
               color="#black"
               size="2x"
@@ -105,7 +111,7 @@ const Header = () => {
             />
           ) : (
             <FontAwesomeIcon
-              className="hover:cursor-pointer opacity-25 relative top-10"
+              className="hover:cursor-pointer opacity-25 relative top-5"
               icon={faBars}
               color="#black"
               size="2x"
@@ -115,7 +121,7 @@ const Header = () => {
             />
           )}
           {toggle && (
-            <div className="bg-slate-700 bg-opacity-50 pt-10 md:pt-0 absolute w-screen h-screen top-0 items-start pl-9 md:pl-0 right-0 z-50 flex md:justify-around md:items-center backdrop-blur-md">
+            <div className="bg-slate-700 bg-opacity-50 pt-10 md:pt-0 absolute w-screen h-screen top-0 items-start pl-9 md:pl-0 right-0 z-40 flex md:justify-around md:items-center backdrop-blur-md">
               <div className="flex flex-col text-slate-900 z-10 gap-10   ">
                 <Link
                   href="/"

@@ -1,51 +1,35 @@
 "use client";
-import React, { useState } from "react";
 import axios from "axios";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelopeOpenText, faPhone } from "@fortawesome/free-solid-svg-icons";
-import {
-  faWhatsapp,
-  faFacebook,
-  faYoutube,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
-import Map from "../component/Map";
+import Link from "next/link.js";
+import React, { useState } from "react";
 
-export default function Contact({}) {
+export default function Register() {
   const [status, setStatus] = useState({
     submitted: false,
-
     submitting: false,
-
     info: { error: false, msg: null },
   });
 
   const [inputs, setInputs] = useState({
     email: "",
-
-    message: "",
-
+    name: "",
     telephone: "",
+    password: "",
   });
 
   const handleServerResponse = (ok, msg) => {
     if (ok) {
       setStatus({
         submitted: true,
-
         submitting: false,
-
         info: { error: false, msg: msg },
       });
 
       setInputs({
         email: "",
-
-        message: "",
-
         telephone: "",
-
         name: "",
+        password: "",
       });
     } else {
       setStatus({
@@ -56,40 +40,29 @@ export default function Contact({}) {
 
   const handleOnChange = (e) => {
     e.persist();
-
     setInputs((prev) => ({
       ...prev,
-
       [e.target.id]: e.target.value,
     }));
 
     setStatus({
       submitted: false,
-
       submitting: false,
-
       info: { error: false, msg: null },
     });
   };
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
-
     setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
 
     axios({
       method: "POST",
-
-      url: "https://eod5ew1fzy5gvuj.m.pipedream.net",
-
+      url: "http://localhost:8080",
       data: inputs,
     })
       .then((response) => {
-        handleServerResponse(
-          true,
-
-          "Merci, votre message a été soumis."
-        );
+        handleServerResponse(true, "Merci, votre message a été soumis.");
       })
 
       .catch((error) => {
@@ -98,33 +71,16 @@ export default function Contact({}) {
   };
 
   return (
-    <main>
-      <div className="flex justify-center items-center pt-4 sm:p-0 h-14  mx-28">
-        <FontAwesomeIcon
-          className="px-5 text-2xl hover:scale-125 hover:text-blue-800 hover:cursor-pointer"
-          icon={faFacebook}
-        />
-        <FontAwesomeIcon
-          className="px-5 text-2xl hover:scale-125 hover:text-red-800 hover:cursor-pointer"
-          icon={faYoutube}
-        />
-        <FontAwesomeIcon
-          className="px-5 text-2xl hover:scale-125 hover:text-blue-800 hover:cursor-pointer"
-          icon={faLinkedin}
-        />
-      </div>
-
-      <h1 className="text-xl font-semibold pl-4 pt-4">Contactez nous</h1>
-      <div className="h-5 bg-gray-300 my-6"> </div>
-
-      <div className="flex flex-col lg:flex-row">
-        <div className="flex-1">
+    <div>
+      <main>
+        <div className="fixed inset-0 bg-slate-600 z-50 overflow-y-hidden">
           <form
             onSubmit={handleOnSubmit}
-            className="grid gap-y-4 px-4 max-w-3xl"
+            className="mt-5 m-auto grid gap-y-4 px-4 max-w-3xl bg-white rounded-xl items-center p-5 justify-center"
           >
+            <div>Bonjour</div>
             <label
-              htmlFor="tel"
+              htmlFor="name"
               className="text-gray-600 text-xs font-semibold uppercase"
             >
               Nom*
@@ -172,17 +128,17 @@ export default function Contact({}) {
             />
 
             <label
-              htmlFor="message"
+              htmlFor="password"
               className="text-gray-600 text-xs font-semibold uppercase"
             >
-              Message*
+              Mot de passe*
             </label>
-            <textarea
-              id="message"
-              name="message"
+            <input
+              id="password"
+              name="password"
               onChange={handleOnChange}
               required
-              value={inputs.message}
+              value={inputs.password}
               className="border border-gray-300 rounded px-2 py-1 transition-all duration-200 focus:outline-none focus:border-blue-500 w-full md:w-auto"
             />
 
@@ -197,27 +153,19 @@ export default function Contact({}) {
             >
               {!status.submitting
                 ? !status.submitted
-                  ? "Submit"
+                  ? "Sign up"
                   : "Submitted"
-                : "Submitting..."}
+                : "Signing up..."}
             </button>
+            <Link className="px-4 py-2 rounded m-auto cursor-pointer font-semibold  text-white bg-blue-400 hover:bg-slate-600 transition-all duration-200"
+            href={'/'}> retoutner à la page d'acceuil</Link>
           </form>
-
-          {status.info.error && (
-            <div className="error bg-red-600 text-white text-center py-2 mt-4 max-w-3xl">
-              Error: {status.info.msg}
-            </div>
-          )}
-
-          {!status.info.error && status.info.msg && (
-            <p className="mt-2">{status.info.msg}</p>
-          )}
         </div>
-
-        <div className="flex-1">
-          <Map />
-        </div>
-      </div>
-    </main>
+      </main>
+    </div>
   );
 }
+
+Register.getLayout = function PageLayout(page) {
+  return <RootLayout>{page}</RootLayout>;
+};

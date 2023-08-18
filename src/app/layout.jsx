@@ -1,5 +1,4 @@
 import "./globals.css";
-// import "@fortawesome/fontawesome-svg-core/styles.css";
 import { Transition } from "./component/Transition";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelopeOpenText, faPhone } from "@fortawesome/free-solid-svg-icons";
@@ -9,8 +8,6 @@ import {
   faYoutube,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-// import { config } from "@fortawesome/fontawesome-svg-core";
-// config.autoAddCss = false;
 import Header from "./component/Header";
 import Footer from "./component/Footer";
 import NewsLetter from "./component/newsLetter";
@@ -22,12 +19,13 @@ export const metadata = {
   description: "best foundation ever",
 };
 
-const poppins = Poppins({ subsets: ["devanagari"], weight: [ "600"] });
+const poppins = Poppins({ subsets: ["devanagari"], weight: ["600"] });
+
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
       <body className="">
-        <div className="lg:flex hidden h-10 bg-veryTop items-center relative z-50">
+        <div className="lg:flex hidden h-10 bg-veryTop items-center relative z-30">
           <div className="w-screen flex justify-around ">
             <div>
               <FontAwesomeIcon className="px-1" icon={faEnvelopeOpenText} />
@@ -54,14 +52,14 @@ export default function RootLayout({ children }) {
         </div>
         <Header />
 
-          <div
-            className={`${poppins.className} pb-10 sm:p-16 md:p-24 lg:py-24 lg:px-32 text-gray-500 tex`}
-          >
-            {children}
-          </div>
+        <div
+          className={`${poppins.className} pb-10 sm:p-16 md:p-24 lg:py-24 lg:px-32 text-gray-500 tex`}
+        >
+          {children}
+        </div>
 
-          <NewsLetter />
-          <Footer />
+        <NewsLetter />
+        <Footer />
 
         <div className="flex h-14 text-center items-center justify-center bg-slate-600">
           <small>
