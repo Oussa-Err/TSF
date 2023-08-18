@@ -121,17 +121,16 @@ const Header = () => {
             />
           )}
           {toggle && (
-            <div className="bg-slate-700 bg-opacity-50 pt-10 md:pt-0 absolute w-screen h-screen top-0 items-start pl-9 md:pl-0 right-0 z-40 flex md:justify-around md:items-center backdrop-blur-md">
+            <div className="bg-slate-700 bg-opacity-50 pt-10 md:pt-0 absolute w-screen h-screen top-0 items-start pl-9 md:pl-0 right-0 z-40 flex md:justify-around md:items-center backdrop-blur-xl">
               <div className="flex flex-col text-slate-900 z-10 gap-10   ">
-                <Link
-                  href="/"
-                  className="text-2xl py-3 pr-14 pt-10 font-extrabold text-white"
+                <div
+                  className="text-2xl py-3 pr-14 pt-10 font-extrabold text-white drop-shadow-lg"
                 >
                   TRINATIONAL SCIENTIFIQUE FOUNDATION
-                </Link>
+                </div>
                 <Link
                   href="/"
-                  className="font-mono font-semibold text-xl hover:text-anchor"
+                  className="font-mono font-bold text-xl hover:text-anchor"
                   onClick={() => {
                     setToggle(false), toggleMenu();
                   }}
@@ -165,7 +164,7 @@ const Header = () => {
                       onClick={() => setDropToggle(false)}
                       className="fixed w-screen h-screen inset-0 bg-black bg-transparent"
                     ></div>
-                    <div className="relative bg-white bg-opacity-30 rounded-lg p-2 md:p-6 flex flex-col transition-all ease-in-out duration-200">
+                    <div className="relative w-fit bg-white bg-opacity-30 rounded-lg p-2 md:p-6 flex flex-col transition-all ease-in-out duration-200">
                       <Link
                         href="/tsf/aboutus"
                         className="hover:text-anchor p-3"

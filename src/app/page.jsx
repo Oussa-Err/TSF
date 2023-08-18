@@ -6,7 +6,7 @@ import Slide from "./component/Swiper";
 
 export default function Home({}) {
   return (
-      <main className="bg-gradient-to-b from-footerBg to-white rounded-tr-lg rounded-tl-lg overflow-hidden">
+      <main className="bg-gradient-to-b from-footerBg to-white md:rounded-tr-lg md:rounded-tl-lg  overflow-hidden">
         <div className="flex flex-col">
           <div className="xl:flex-row  flex  flex-col">
             <div className="bg-footerBg w-full flex flex-col flex-1 justify-center py-10">

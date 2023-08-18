@@ -53,7 +53,7 @@ export default function RootLayout({ children }) {
         <Header />
 
         <div
-          className={`${poppins.className} pb-10 sm:p-16 md:p-24 lg:py-24 lg:px-32 text-gray-500 tex`}
+          className={`${poppins.className} pb-10 pt-10 sm:p-16 md:p-24  lg:px-32 text-gray-500 tex`}
         >
           {children}
         </div>
