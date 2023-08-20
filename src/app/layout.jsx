@@ -11,7 +11,6 @@ import {
 import Header from "./component/Header";
 import Footer from "./component/Footer";
 import NewsLetter from "./component/newsLetter";
-import Slide from "./component/Swiper";
 import { Poppins } from "next/font/google";
 
 export const metadata = {

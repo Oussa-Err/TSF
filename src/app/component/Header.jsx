@@ -48,11 +48,13 @@ const Header = () => {
           >
             Acceuil
           </Link>
-          
-          <div className="relative inline-block group transition-all ease-in-out 
-          delay-150 duration-300">
+
+          <div
+            className="relative inline-block group transition-all ease-in-out 
+          delay-150 duration-300"
+          >
             <button className="px-4 pb-2 text-gray-800 after:content-[''] after:bg-red-900  after:h-[4px] after:w-[0%]  after:left-3 after:bottom-1 after:rounded-xl after:absolute  after:duration-100 after:ease-in hover:scale-105 after:hover:w-[150px]">
-            TSF foundation
+              TSF foundation
             </button>
             <div className="hidden group-hover:block hover:transition-all ease-in-out delay-150 duration-300 absolute min-w-[278px] z-10 pb-4 bg-white rounded-lg shadow-lg">
               <Link
@@ -81,22 +83,26 @@ const Header = () => {
               </Link>
             </div>
             <FontAwesomeIcon
-                  className="hover:cursor-pointer animate-bounce relative -left-2"
-                  icon={faCaretDown}
-                  size="1x"
-                />
+              className="hover:cursor-pointer animate-bounce relative -left-2"
+              icon={faCaretDown}
+              size="1x"
+            />
           </div>
-          <Link href="/contact" className=" relative px-4 pb-2 text-gray-800 after:content-[''] after:bg-red-900  after:h-[4px] after:w-[0%]  after:left-3 after:bottom-1 after:rounded-xl after:absolute  after:duration-100 after:ease-in hover:scale-105 after:hover:w-[90px]">
+          <Link
+            href="/contact"
+            className=" relative px-4 pb-2 text-gray-800 after:content-[''] after:bg-red-900  after:h-[4px] after:w-[0%]  after:left-3 after:bottom-1 after:rounded-xl after:absolute  after:duration-100 after:ease-in hover:scale-105 after:hover:w-[90px]"
+          >
             Contact
           </Link>
-          <Link href="/register" className=" relative px-4 pb-2 text-gray-800 after:content-[''] after:bg-red-900  after:h-[4px] after:w-[0%]  after:left-3 after:bottom-1 after:rounded-xl after:absolute  after:duration-100 after:ease-in hover:scale-105 after:hover:w-[90px]">
-            S'inscrire
-          </Link>
-          <Link href="/login" className=" relative px-4 pb-2 text-gray-800 after:content-[''] after:bg-red-900  after:h-[4px] after:w-[0%]  after:left-3 after:bottom-1 after:rounded-xl after:absolute  after:duration-100 after:ease-in hover:scale-105 after:hover:w-[90px]">
-            S'identifier
-          </Link>
+          <div className="flex bg-red-900 text-white rounded-lg">
+            <Link
+              href="/login"
+              className=" relative px-4 pb-2 after:content-[''] after:bg-red-900  after:h-[4px] after:w-[0%]  after:left-3 after:bottom-1 after:rounded-xl after:absolute  after:duration-100 after:ease-in hover:scale-105 after:hover:w-[90px]"
+            >
+              + SE CONNECTER
+            </Link>
+          </div>
         </nav>
-
 
         <div className="lg+:hidden flex w-full justify-end pr-5 ">
           {toggle ? (
@@ -123,9 +129,7 @@ const Header = () => {
           {toggle && (
             <div className="bg-slate-700 bg-opacity-50 pt-10 md:pt-0 absolute w-screen h-screen top-0 items-start pl-9 md:pl-0 right-0 z-40 flex md:justify-around md:items-center backdrop-blur-xl">
               <div className="flex flex-col text-slate-900 z-10 gap-10   ">
-                <div
-                  className="text-2xl py-3 pr-14 pt-10 font-extrabold text-white drop-shadow-lg"
-                >
+                <div className="text-2xl py-3 pr-14 pt-10 font-extrabold text-white drop-shadow-lg">
                   TRINATIONAL SCIENTIFIQUE FOUNDATION
                 </div>
                 <Link

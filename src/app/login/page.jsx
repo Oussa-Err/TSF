@@ -1,9 +1,12 @@
 "use client";
+import { faGoogle } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
+import Link from "next/link.js";
 import React, { useState } from "react";
-import Link from "next/link";
+import NoLayout from "../component/nolayouts";
 
-export default function Register() {
+const Login = () => {
   const [status, setStatus] = useState({
     submitted: false,
     submitting: false,
@@ -73,64 +76,97 @@ export default function Register() {
   return (
     <div>
       <main>
-        <div className="fixed inset-0 bg-slate-600 z-50 overflow-y-hidden">
-          <form
-            onSubmit={handleOnSubmit}
-            className="mt-5 m-auto grid gap-y-4 px-4 max-w-3xl bg-white rounded-xl items-center p-5 justify-center"
-          >
-            <div>Bonjour</div>
-
-            <label
-              htmlFor="email"
-              className="text-gray-600 text-xs font-semibold uppercase"
+        <div className=" bg-white overflow-y-hidden">
+          <div className="m-auto   flex flex-col items-center justify-center">
+            <div className="text-center py-4">Connexion / Inscription</div>
+            <p className="text-center">
+              Saisissez votre e-mail pour vous connecter
+            </p>
+            <form
+              onSubmit={handleOnSubmit}
+              className="mt-5 m-auto grid gap-y-2 px-4 bg-white rounded-xl items-center p-5 justify-center"
             >
-              Email*
-            </label>
-            <input
-              id="email"
-              type="email"
-              name="_replyto"
-              onChange={handleOnChange}
-              required
-              value={inputs.email}
-              className="border border-gray-300 rounded py-1 px-2 transition-all duration-200 focus:outline-none focus:border-blue-500 w-full md:w-auto"
-            />
+              <label
+                htmlFor="email"
+                className="text-gray-600 text-xs font-semibold uppercase"
+              >
+                Email*
+              </label>
+              <input
+                id="email"
+                type="email"
+                name="_replyto"
+                onChange={handleOnChange}
+                required
+                value={inputs.email}
+                className="border border-gray-300 rounded py-1 px-2 transition-all duration-200 focus:outline-none focus:border-blue-500 w-full md:w-auto"
+              />
 
-            <label
-              htmlFor="password"
-              className="text-gray-600 text-xs font-semibold uppercase"
-            >
-              Mot de passe*
-            </label>
-            <input
-              id="password"
-              name="password"
-              onChange={handleOnChange}
-              required
-              value={inputs.password}
-              className="border border-gray-300 rounded px-2 py-1 transition-all duration-200 focus:outline-none focus:border-blue-500 w-full md:w-auto"
-            />
+              <label
+                htmlFor="password"
+                className="text-gray-600 text-xs font-semibold uppercase"
+              >
+                Mot de passe*
+              </label>
+              <input
+                id="password"
+                name="password"
+                onChange={handleOnChange}
+                required
+                value={inputs.password}
+                className="border border-gray-300 rounded px-2 py-1 transition-all duration-200 focus:outline-none focus:border-blue-500 w-full md:w-auto"
+              />
 
-            <button
-              type="submit"
-              disabled={status.submitting}
-              className={`${
-                status.submitting
-                  ? "bg-gray-400 cursor-not-allowed"
-                  : "bg-blue-500 hover:bg-blue-700"
-              } text-white px-4 py-2 rounded font-semibold transition-all duration-200`}
-            >
-              {!status.submitting
-                ? !status.submitted
-                  ? "Submit"
-                  : "Submitted"
-                : "Submitting..."}
+              <button
+                type="submit"
+                disabled={status.submitting}
+                className={`${
+                  status.submitting
+                    ? "bg-gray-400 cursor-not-allowed"
+                    : "bg-blue-500 hover:bg-blue-700"
+                } text-white px-4 py-2 rounded font-semibold transition-all duration-200`}
+              >
+                {!status.submitting
+                  ? !status.submitted
+                    ? "Connexion"
+                    : "Connecté!"
+                  : "Connexion..."}
+              </button>
+              <button>mot de passe oublié?</button>
+            </form>
+            <div className="flex items-center justify-center">
+              <div className="h-[1px] w-auto md:w-10 bg-gray-600 rounded-lg"></div>
+              <small className="px-5">Nouveau chez la Fondation TSF?</small>
+              <div className="h-[1px] w-auto md:w-10 bg-gray-600 rounded-lg"></div>
+            </div>
+            <Link href={"/register"} className="py-5">
+              <button className="inline-block mx-auto px-4 py-2 rounded m-auto cursor-pointer text-center font-semibold  text-white bg-green-400 hover:bg-green-600 transition-all duration-200">
+                Créez votre compte
+              </button>
+            </Link>
+            <div className="flex items-center justify-center">
+              <div className="h-[1px] w-auto md:w-10 bg-gray-600 rounded-lg"></div>
+              <small className="px-5">ou</small>
+              <div className="h-[1px] w-auto md:w-10 bg-gray-600 rounded-lg"></div>
+            </div>
+            <button className="text-white bg-red-400 h-14 px-4 mt-4  rounded-lg m-auto">
+              <div>
+                Se connecter avec Google
+                <FontAwesomeIcon color="" className="px-4" icon={faGoogle} />
+              </div>
             </button>
-            <Link className="px-4 py-2 rounded m-auto cursor-pointer font-semibold  text-white bg-blue-400 hover:bg-slate-600 transition-all duration-200"
-            href={'/'}> retoutner à la page d'acceuil</Link>
-          </form>
+            <Link
+              className=" mt-8 px-4 py-2 m-auto cursor-pointer text-center font-mono  text-gray-700 hover:underline transition-all duration-200"
+              href={"/"}
+            >
+              retourner à la page d'acceuil
+            </Link>
+          </div>
         </div>
       </main>
     </div>
   );
-}
+};
+
+Login.getLayout = (page) => <NoLayout>{page}</NoLayout>;
+export default Login;
