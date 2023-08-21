@@ -41,7 +41,7 @@ const Header = () => {
             />
           </Link>
         </div>
-        <nav className="hidden lg+:flex relative gap-5 text-[1.2rem] opacity-40 font-bold tracking-[1px] ">
+        <nav className="hidden lg+:flex items-center justify-center relative gap-5 text-[1.2rem] opacity-40 font-bold tracking-[1px] ">
           <Link
             href="/"
             className="relative px-4 pb-2 text-gray-800 after:content-[''] after:bg-red-900  after:h-[4px] after:w-[0%]  after:left-3 after:bottom-1 after:rounded-xl after:absolute  after:duration-100 after:ease-in hover:scale-105 after:hover:w-[90px]"
@@ -94,12 +94,12 @@ const Header = () => {
           >
             Contact
           </Link>
-          <div className="flex bg-red-900 text-white rounded-lg">
+          <div className="flex bg-red-900 xl:ml-48 justify-center items-center pt-2 text-white rounded-lg">
             <Link
               href="/login"
               className=" relative px-4 pb-2 after:content-[''] after:bg-red-900  after:h-[4px] after:w-[0%]  after:left-3 after:bottom-1 after:rounded-xl after:absolute  after:duration-100 after:ease-in hover:scale-105 after:hover:w-[90px]"
             >
-              + SE CONNECTER
+              SE CONNECTER
             </Link>
           </div>
         </nav>
@@ -217,6 +217,14 @@ const Header = () => {
                 >
                   Contact
                 </Link>
+                <div className="flex bg-red-900 justify-center items-center pt-2 text-white rounded-lg">
+                  <Link
+                    href="/login"
+                    className=" relative px-4 pb-2 after:content-[''] after:bg-red-900  after:h-[4px] after:w-[0%]  after:left-3 after:bottom-1 after:rounded-xl after:absolute  after:duration-100 after:ease-in hover:scale-105 after:hover:w-[90px]"
+                  >
+                    SE CONNECTER
+                  </Link>
+                </div>
               </div>
             </div>
           )}
