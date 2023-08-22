@@ -19,7 +19,7 @@ export default async function News() {
 
 
   return (
-    <div className="pr-2 sm:pr-4 ">
+    <div className="sm:pr-4 ">
       <div className="h-28 bg-titlesBg drop-shadow-2xl relative w-full  md:w-4/5 top-4 sm:-left-16  md:-left-24 lg:-left-32 flex items-center justify-center">
         <h1 className="text-zinc-700 md:text-center font-extrabold text-[2rem] md:text-[3rem] lg:text-[4rem]">
           Nos actualités
@@ -27,15 +27,15 @@ export default async function News() {
       </div>
 
       <div className="my-4">
-        <ul className="gap-3 py-10 flex flex-col  justify-center items-center">
+        <ul className="gap-3 py-10 flex flex-col   items-center">
           {newsItem.slice(page * 4 - 4, page * 4).map((news) => (
             <li
               key={news.id}
-              className="flex flex-col gap-7 pt-4 bg-white rounded-xl w-3/4  items-start justify-center"
+              className="w-full sm:w-3/4  flex flex-col gap-7 pt-4 bg-white rounded-xl  items-start justify-center"
             >
               <Link href={`/tsf/news/${news.id}`}>
                 <Image
-                  className="px-2 lg:px-20 bg-no-repeat w-full h-full rounded-md transition-all duration-200 hover:scale-105 hover:opacity-50 ease-in-out"
+                  className="lg:px-20 bg-no-repeat w-full h-full rounded-md transition-all duration-200 hover:scale-105 hover:opacity-50 ease-in-out"
                   src={news.images[0]}
                   width={300}
                   height={50}
@@ -49,8 +49,8 @@ export default async function News() {
                 <p className="lg:px-20 mt-5 font-bold text-blue-950 text-xl">
                   {news.title}
                 </p>
-                <p className="lg:px-24 mt-10 font-mono text-slate-600">
-                  {news.description.slice(0, 150) + "...."}
+                <p className="lg:px-24 my-5 text-sm font-thin text-slate-600">
+                  {'- ' + news.description.slice(0, 150) + "...."}
                 </p>
                 <Link href={`/tsf/news/${news.id}`}>
                   <button
@@ -65,32 +65,33 @@ export default async function News() {
           ))}
         </ul>
         {newsItem.length > 0 && (
-          <ul className="flex gap-10 items-center justify-center">
-            <div
-                className={page === 1? 'hidden' : `w-10 h-8 my-auto cursor-pointer hover:bg-slate-600 hover:text-white text-center`}
+          <ul className=" flex justify-center item  -space-x-px text-sm">
+            <li
+                className={page === 1? 'hidden' : ` cursor-pointer flex items-center justify-center px-3 h-8 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white`}
                 onClick={() => setPageHandler(page - 1)}
               >
-                &lt;
-              </div>
+                précédent
+              </li>
 
             {[...Array(Math.round(newsItem.length / 4))].map((_, i) => {
               return (
-                <button
-                  className={page === i+1 ?`flex cursor-pointer w-10 h-8 my-auto bg-anchor text-white text-center`: ''}
+                <li
+                aria-current={page}
+                  className={page === i+1 ?`flex items-center justify-center px-3 h-8 text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white`: ' cursor-pointer flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white'}
                   key={i}
                   onClick={() => setPageHandler(i + 1)}
                 >
                   {i + 1}
-                </button>
+                </li>
               );
             })}
             <li>
-              <div
-                className={page === (Math.round(newsItem.length / 4))? 'hidden' : `w-10 h-8 my-auto cursor-pointer hover:bg-slate-600 hover:text-white text-center`}
+              <li
+                className={page === (Math.round(newsItem.length / 4))? 'hidden' : ` cursor-pointer flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white`}
                 onClick={() => setPageHandler(page + 1)}
               >
-                &gt;
-              </div>
+                suivant
+              </li>
             </li>
           </ul>
         )}
