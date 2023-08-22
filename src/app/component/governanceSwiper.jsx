@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import partners from "../../../public/data/partners.json";
+import gouvernancePartners from "../../../public/data/gouvernancePartners.json";
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
@@ -14,27 +14,26 @@ export const GouvernanceSlide = () => {
     <div className=" bg-cover bg-no-repeat w-full h-full bg-center">
       <Swiper
         spaceBetween={30}
-        slidesPerView={3}
-        centeredSlides={true}
+        slidesPerView={2}
+        // centeredSlides={true}
 
         autoplay={{
           delay:5,
           waitForTransition: true,
           disableOnInteraction: true,
         }}
-        // effect="slide" // Using the "slide" effect for smoother transitions
+        
         speed={1500} 
         pagination={{
           clickable: true,
         }}
-        navigation={true}
+        // navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className=""
       >
-        {partners.map((partner, index) => (
+        {gouvernancePartners.map((partner, index) => (
           <SwiperSlide key={index} className="">
             <Image
-              className="m-auto p-8 self-center my-auto"
+              className="m-auto p-4 self-center my-auto filter grayscale"
               src={partner.imageUrl}
               width={300}
               height={100}

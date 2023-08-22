@@ -76,7 +76,7 @@ export default function Login() {
   return (
     <div>
       <NoLayout>
-        <div className=" bg-white overflow-y-hidden">
+        <div className=" bg-white rounded-md overflow-y-hidden">
           <div className="m-auto   flex flex-col items-center justify-center">
             <div className="text-center py-4">Connexion / Inscription</div>
             <p className="text-center">

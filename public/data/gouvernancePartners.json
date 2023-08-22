@@ -1,0 +1,22 @@
+[
+    {
+        "id": 0,
+        "title": "MEN",
+        "imageUrl": "/assets/MEN.jpeg"
+    },
+    {
+        "id": 7,
+        "title": "Sports",
+        "imageUrl": "/assets/diamondVert-fes.jpg"
+    },
+    {
+        "id": 2,
+        "title": "michlifen",
+        "imageUrl": "/assets/michlifenIfran.jpg"
+    },
+    {
+        "id": 2,
+        "title": "SOFITEL",
+        "imageUrl": "/assets/sofitel-rabat.png"
+    }
+]

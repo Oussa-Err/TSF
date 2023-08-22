@@ -23,15 +23,5 @@
         "id": 5,
         "title": "Sports",
         "imageUrl": "/assets/stationF-logo.png"
-    },
-    {
-        "id": 6,
-        "title": "Sports",
-        "imageUrl": "/assets/MEN.jpeg"
-    },
-    {
-        "id": 7,
-        "title": "Sports",
-        "imageUrl": "/assets/diamondVert-fes.jpg"
     }
 ]

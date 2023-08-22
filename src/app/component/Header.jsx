@@ -220,7 +220,7 @@ const Header = () => {
                 <div className="flex bg-red-900 justify-center items-center py-2 text-white rounded-lg">
                   <Link
                     href="/login"
-                    className=" relative px-4 after:content-[''] after:bg-red-900  after:h-[4px] after:w-[0%]  after:left-3 after:bottom-1 after:rounded-xl after:absolute  after:duration-100 after:ease-in hover:scale-105 after:hover:w-[90px]"
+                    className=" relative px-4 bg-anchor after:duration-100 after:ease-in hover:scale-105 after:hover:w-[90px]"
                   >
                     SE CONNECTER
                   </Link>
