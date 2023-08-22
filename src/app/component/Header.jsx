@@ -128,7 +128,7 @@ const Header = () => {
           )}
           {toggle && (
             <div className="bg-slate-700 bg-opacity-50 pt-10 md:pt-0 absolute w-screen h-screen top-0 items-start pl-9 md:pl-0 right-0 z-40 flex md:justify-around md:items-center backdrop-blur-xl">
-              <div className="flex flex-col text-slate-900 z-10 gap-10   ">
+              <div className="flex flex-col text-slate-900 z-10 gap-4 md:gap-10   ">
                 <div className="text-2xl py-3 pr-14 pt-10 font-extrabold text-white drop-shadow-lg">
                   TRINATIONAL SCIENTIFIQUE FOUNDATION
                 </div>
@@ -217,10 +217,10 @@ const Header = () => {
                 >
                   Contact
                 </Link>
-                <div className="flex bg-red-900 justify-center items-center py-2 text-white rounded-lg">
+                <div className="flex w-3/4 bg-anchor  justify-center items-center py-2 text-darkerBg rounded-lg">
                   <Link
                     href="/login"
-                    className=" relative px-4 bg-anchor after:duration-100 after:ease-in hover:scale-105 after:hover:w-[90px]"
+                    className=" relative px-4 after:duration-100 after:ease-in hover:scale-105 after:hover:w-[90px]"
                   >
                     SE CONNECTER
                   </Link>
