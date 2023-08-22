@@ -1,11 +1,10 @@
+"use client"
 import axios from "axios";
 import React, { useState } from "react";
 
 const NewsLetter = () => {
 
-  const [email, setEmail] = useState(
-    email = ''
-  )
+  const [email, setEmail] = useState()
 
 
 
