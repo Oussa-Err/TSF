@@ -12,7 +12,7 @@ export const Slide = () => {
   return (
     <div className="caroussel-bg-img bg-cover bg-no-repeat w-full h-full bg-center">
       <div className="w-full">
-        <h1 className="text-white text-center text-lg font-mono py-4">Nos Partenaire</h1>
+        <h1 className="text-white text-center text-lg font-mono py-4">Nos Partenaires</h1>
       </div>
       <Swiper
         spaceBetween={30}

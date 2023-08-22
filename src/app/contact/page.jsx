@@ -114,14 +114,15 @@ export default function Contact({}) {
         />
       </div>
 
-      <h1 className="text-xl font-semibold pl-4 pt-4">Contactez nous</h1>
-      <div className="h-5 bg-gray-300 my-6"> </div>
+      <div className="bg-anchor drop-shadow-2xl">
+        <h1 className="text-3xl pb-4 text-white text-center shadow-xl font-semibold pl-4 pt-4">Contactez nous</h1>
+      </div>
 
-      <div className="flex flex-col lg:flex-row">
+      <div className="bg-slate-100 md:p-10  flex flex-col lg:flex-row">
         <div className="flex-1">
           <form
             onSubmit={handleOnSubmit}
-            className="grid gap-y-4 px-4 max-w-3xl"
+            className="grid gap-y-4 px-4 max-w-3xl pt-4"
           >
             <label
               htmlFor="tel"
@@ -213,9 +214,23 @@ export default function Contact({}) {
             <p className="mt-2">{status.info.msg}</p>
           )}
         </div>
-
-        <div className="flex-1">
-          <Map />
+        <div className="">
+          <div className="flex flex-1 flex-col gap-3 pt-5 px-3 md:px-0">
+            <h2 className="text-lg font-extrabold text-black">Location</h2>
+            <div className="bg-slate-600 rounded-md font-extrabold h-[2px] hidden sm:block" ></div>
+            <p>
+              TSF Fondation du Maroc – 81, Avenue Allal Ben Abdellah Hassane -
+              Rabat <br /> ET <br />
+              199, Av. Ibn Sina, 31000 - Sefrou
+            </p>
+            <p>
+              TSF Fondation du France – 55, Bd Vincent Auriol, 75013 Paris –
+              Paris
+            </p>
+          </div>
+          <div className="flex-1">
+            <Map />
+          </div>
         </div>
       </div>
     </main>

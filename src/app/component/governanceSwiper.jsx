@@ -14,11 +14,16 @@ export const GouvernanceSlide = () => {
     <div className=" bg-cover bg-no-repeat w-full h-full bg-center">
       <Swiper
         spaceBetween={30}
+        slidesPerView={3}
         centeredSlides={true}
+
         autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
+          delay:5,
+          waitForTransition: true,
+          disableOnInteraction: true,
         }}
+        // effect="slide" // Using the "slide" effect for smoother transitions
+        speed={1500} 
         pagination={{
           clickable: true,
         }}
