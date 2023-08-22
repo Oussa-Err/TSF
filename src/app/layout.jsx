@@ -20,7 +20,8 @@ export const metadata = {
 
 const poppins = Poppins({ subsets: ["devanagari"], weight: ["600"] });
 
-export default function RootLayout({ children }) {
+export default function RootLayout({children}) {
+
   return (
     <html lang="fr">
       <body className="">
@@ -54,7 +55,7 @@ export default function RootLayout({ children }) {
         <div
           className={`${poppins.className} pb-10 pt-10 sm:p-16 md:p-24  lg:px-32 text-gray-500 tex`}
         >
-          {children}
+        {children}
         </div>
 
         <NewsLetter />

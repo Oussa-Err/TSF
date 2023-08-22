@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import news from "../../public/data/news.json";
 import Slide from "./component/Swiper";
-// import { motion, AnimatePresence } from "framer-motion";
 
 export default function Home({}) {
   return (
@@ -32,11 +31,10 @@ export default function Home({}) {
 
           <div>
             <p className="md:text-center p-7 font-thin bg-slate-50 text-lg text-gray-700 pb-8 px-4">
-              La Fondation TSF{" "}
+              La Fondation TSF
               <span className="font-bold text-orange-700">
-                {" "}
-                Fondation des Scientifiques Marocains à l'Etranger{" "}
-              </span>{" "}
+                Fondation des Scientifiques Marocains à l'Etranger
+              </span>
               incarne l'esprit d'innovation, d'expertise et d'engagement des
               scientifiques, chercheurs, professeurs, experts, bâtisseurs et
               entrepreneurs qui se consacrent avec dévouement aux défis

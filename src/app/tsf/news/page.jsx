@@ -1,8 +1,23 @@
+"use client";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import news from "../../../../public/data/news.json";
 import Image from "next/image";
 
 export default async function News() {
+  const [newsItem, setNewsItem] = useState(news);
+  const [page, setPage] = useState(1);
+
+  useEffect(() => {
+    setNewsItem(news);
+  }, []);
+
+  const setPageHandler = (no) => {
+    if (no>0 && no<=Math.round(newsItem.length/4) && no !== page)
+     setPage(no)
+  }
+
+
   return (
     <div className="pr-2 sm:pr-4 ">
       <div className="h-28 bg-titlesBg drop-shadow-2xl relative w-full  md:w-4/5 top-4 sm:-left-16  md:-left-24 lg:-left-32 flex items-center justify-center">
@@ -13,7 +28,7 @@ export default async function News() {
 
       <div className="my-4">
         <ul className="gap-3 py-10 flex flex-col  justify-center items-center">
-          {news.map((news) => (
+          {newsItem.slice(page * 4 - 4, page * 4).map((news) => (
             <li
               key={news.id}
               className="flex flex-col gap-7 pt-4 bg-white rounded-xl w-3/4  items-start justify-center"
@@ -49,6 +64,36 @@ export default async function News() {
             </li>
           ))}
         </ul>
+        {newsItem.length > 0 && (
+          <ul className="flex gap-10 items-center justify-center">
+            <div
+                className={page === 1? 'hidden' : `w-10 h-8 my-auto cursor-pointer hover:bg-slate-600 hover:text-white text-center`}
+                onClick={() => setPageHandler(page - 1)}
+              >
+                &lt;
+              </div>
+
+            {[...Array(Math.round(newsItem.length / 4))].map((_, i) => {
+              return (
+                <button
+                  className={page === i+1 ?`flex cursor-pointer w-10 h-8 my-auto bg-anchor text-white text-center`: ''}
+                  key={i}
+                  onClick={() => setPageHandler(i + 1)}
+                >
+                  {i + 1}
+                </button>
+              );
+            })}
+            <li>
+              <div
+                className={page === (Math.round(newsItem.length / 4))? 'hidden' : `w-10 h-8 my-auto cursor-pointer hover:bg-slate-600 hover:text-white text-center`}
+                onClick={() => setPageHandler(page + 1)}
+              >
+                &gt;
+              </div>
+            </li>
+          </ul>
+        )}
       </div>
     </div>
   );

@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import Link from "next/link.js";
 import React, { useState } from "react";
-import NoLayout from "../component/nolayouts";
+import NoLayout from "../layout";
 
-const Login = () => {
+export default function Login() {
   const [status, setStatus] = useState({
     submitted: false,
     submitting: false,
@@ -75,7 +75,7 @@ const Login = () => {
 
   return (
     <div>
-      <main>
+      <NoLayout>
         <div className=" bg-white overflow-y-hidden">
           <div className="m-auto   flex flex-col items-center justify-center">
             <div className="text-center py-4">Connexion / Inscription</div>
@@ -152,7 +152,7 @@ const Login = () => {
             <button className="text-white bg-red-400 h-14 px-4 mt-4  rounded-lg m-auto">
               <div>
                 Se connecter avec Google
-                <FontAwesomeIcon color="" className="px-4" icon={faGoogle} />
+                <FontAwesomeIcon className="px-4" icon={faGoogle} />
               </div>
             </button>
             <Link
@@ -163,10 +163,8 @@ const Login = () => {
             </Link>
           </div>
         </div>
-      </main>
+      </NoLayout>
     </div>
   );
 };
 
-Login.getLayout = (page) => <NoLayout>{page}</NoLayout>;
-export default Login;
