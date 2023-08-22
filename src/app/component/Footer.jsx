@@ -3,7 +3,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <div className="flex w-full text-white bg-footerBg">
-      <footer className=" flex text-sm flex-col justify-start gap-6 text-start items-start  md:items-start sm:p-5  lg:flex-row md:py-6 ">
+      <footer className=" flex text-sm flex-col justify-start gap-6 text-start items-start pb-4  md:items-start sm:p-5  lg:flex-row md:py-6 ">
         <div>
           <Image
             className="object-cover self-center"
@@ -13,7 +13,7 @@ const Footer = () => {
             height={200}
           />
         </div>
-        <div className="p-2 flex flex-col md:flex-row gap-4 ">
+        <div className="p-2 flex flex-col md:flex-row gap-10 ">
           <div className="flex flex-1 flex-col gap-3">
             <h2 className="text-lg font-extrabold">Adresses</h2>
             <hr className="bg-black" />

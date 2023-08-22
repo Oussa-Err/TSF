@@ -218,6 +218,9 @@ const Header = () => {
                   <Link
                     href="/login"
                     className=" relative px-4 after:duration-100 after:ease-in hover:scale-105 after:hover:w-[90px]"
+                    onClick={() => {
+                      setToggle(false), toggleMenu();
+                    }}
                   >
                     SE CONNECTER
                   </Link>
