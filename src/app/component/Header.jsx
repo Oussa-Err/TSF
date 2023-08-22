@@ -164,10 +164,7 @@ const Header = () => {
                 </div>
                 {dropToggle && (
                   <>
-                    <div
-                      onClick={() => setDropToggle(false)}
-                      className="fixed w-screen h-screen inset-0 bg-black bg-transparent"
-                    ></div>
+                    
                     <div className="relative w-fit bg-white bg-opacity-30 rounded-lg p-2 md:p-6 flex flex-col transition-all ease-in-out duration-200">
                       <Link
                         href="/tsf/aboutus"
