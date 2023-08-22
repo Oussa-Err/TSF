@@ -31,11 +31,11 @@ export default function Home({}) {
 
           <div>
             <p className="md:text-center p-7 font-thin bg-slate-50 text-lg text-gray-700 pb-8 px-4">
-              La Fondation TSF
+              La Fondation TSF&nbsp; 
               <span className="font-bold text-orange-700">
                 Fondation des Scientifiques Marocains à l'Etranger
               </span>
-              incarne l'esprit d'innovation, d'expertise et d'engagement des
+              &nbsp;incarne l'esprit d'innovation, d'expertise et d'engagement des
               scientifiques, chercheurs, professeurs, experts, bâtisseurs et
               entrepreneurs qui se consacrent avec dévouement aux défis
               complexes du Maroc et de l'Afrique. Ces esprits brillants font
