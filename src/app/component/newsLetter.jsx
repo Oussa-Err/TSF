@@ -1,4 +1,15 @@
+import axios from "axios";
+import React, { useState } from "react";
+
 const NewsLetter = () => {
+
+  const [email, setEmail] = useState(
+    email = ''
+  )
+
+
+
+
   return (
     <div className="flex flex-col md:flex-row bg-slate-300 p-2 gap-4 justify-around items-center">
       <div>
@@ -8,7 +19,7 @@ const NewsLetter = () => {
         <form action="post">
           <input type="email" name="your-email" placeholder=" Email"  className='border-2 focus:border-violet-950 focus:outline-none'/>
         </form>
-        <button className="p-3 bg-orange-400 rounded-md hover:scale-105">Subscribe</button>
+        <button className="p-3 bg-orange-400 rounded-md hover:scale-105">SOUSCRIRE</button>
       </div>
     </div>
   );

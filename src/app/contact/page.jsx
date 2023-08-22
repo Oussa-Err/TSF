@@ -80,7 +80,7 @@ export default function Contact({}) {
     axios({
       method: "POST",
 
-      url: "https://eod5ew1fzy5gvuj.m.pipedream.net",
+      url: { NEXT_PIPEDREAM_URL },
 
       data: inputs,
     })
@@ -115,7 +115,9 @@ export default function Contact({}) {
       </div>
 
       <div className="bg-anchor drop-shadow-2xl">
-        <h1 className="text-3xl pb-4 text-white text-center shadow-xl font-semibold pl-4 pt-4">Contactez nous</h1>
+        <h1 className="text-3xl pb-4 text-white text-center shadow-xl font-semibold pl-4 pt-4">
+          Contactez nous
+        </h1>
       </div>
 
       <div className="bg-slate-100 md:p-10  flex flex-col lg:flex-row">
@@ -217,7 +219,7 @@ export default function Contact({}) {
         <div className="">
           <div className="flex flex-1 flex-col gap-3 pt-5 px-3 md:px-0">
             <h2 className="text-lg font-extrabold text-black">Location</h2>
-            <div className="bg-slate-600 rounded-md font-extrabold h-[2px] hidden sm:block" ></div>
+            <div className="bg-slate-600 rounded-md font-extrabold h-[2px] hidden sm:block"></div>
             <p>
               TSF Fondation du Maroc – 81, Avenue Allal Ben Abdellah Hassane -
               Rabat <br /> ET <br />
