@@ -16,7 +16,7 @@ module.exports = {
       },
       colors: {
         'heroBg': '#C9CCD5',
-        'footerBg': '#4682A9',
+        'footerBg': '#1F3F54',
         'navbar': '#91C8E4',
         'veryTop': '#749BC2',
         'titlesBg': '#EEE0C9',
