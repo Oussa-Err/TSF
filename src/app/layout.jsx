@@ -64,7 +64,7 @@ export default function RootLayout({children}) {
         <div className="flex h-14 text-center items-center justify-center bg-slate-600">
           <small>
             Copyright &copy; 2023. All rights reserved by
-            <span className="text-blue-400">TSF foundation</span>
+            <span className="text-blue-400">&nbsp;TSF foundation</span>
           </small>
         </div>
       </body>

@@ -80,7 +80,7 @@ export default function Contact({}) {
     axios({
       method: "POST",
 
-      url: { NEXT_PIPEDREAM_URL },
+      url: process.env.NEXT_PIPEDREAM_URL,
 
       data: inputs,
     })
