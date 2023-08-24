@@ -90,7 +90,7 @@ export default function Login() {
                 htmlFor="email"
                 className="text-gray-600 text-xs font-semibold uppercase"
               >
-                Email*
+                Email
               </label>
               <input
                 id="email"
@@ -106,7 +106,7 @@ export default function Login() {
                 htmlFor="password"
                 className="text-gray-600 text-xs font-semibold uppercase"
               >
-                Mot de passe*
+                Mot de passe
               </label>
               <input
                 id="password"
