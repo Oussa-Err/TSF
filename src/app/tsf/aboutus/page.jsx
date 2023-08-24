@@ -30,8 +30,10 @@ const Qui = () => {
               Grandes Écoles ParisTech, en donnant naissance à la S.M.E
               Foundation, une initiative dédiée aux Scientifiques Marocains à
               l'Étranger. Grâce à une mobilisation réussie de trois groupes
-              d'envergure - les États-Unis, le Canada et la France - est née la
-              Trinational Science Foundation, ou TSF.
+              d'envergure:
+              <p>-les États-Unis</p>
+              <p>-le Canada </p>
+              <p>-la France</p>
             </p>
           </div>
         </div>
@@ -92,7 +94,7 @@ const Qui = () => {
               une empreinte positive sur le continent africain dans son
               ensemble. Notre dévouement à l'innovation, à la recherche, à
               l'éducation et à l'impact positif transcende les barrières
-              géographiques et disciplinaires. 
+              géographiques et disciplinaires.
             </p>
           </div>
         </div>
