@@ -1,80 +1,84 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import axios from "axios";
 import Link from "next/link.js";
 import NoLayout from "../layout";
 
 export default function Register() {
-    const [status, setStatus] = useState({
-        submitted: false,
+  const [status, setStatus] = useState({
+    submitted: false,
+    submitting: false,
+    info: { error: false, msg: null },
+  });
+
+  const [inputs, setInputs] = useState({
+    email: "",
+    name: "",
+    telephone: "",
+    password: "",
+  });
+
+  const handleServerResponse = (ok, msg) => {
+    if (ok) {
+      setStatus({
+        submitted: true,
         submitting: false,
-        info: { error: false, msg: null },
+        info: { error: false, msg: msg },
       });
-    
-      const [inputs, setInputs] = useState({
+
+      setInputs({
         email: "",
-        name: "",
         telephone: "",
+        name: "",
         password: "",
       });
-    
-      const handleServerResponse = (ok, msg) => {
-        if (ok) {
-          setStatus({
-            submitted: true,
-            submitting: false,
-            info: { error: false, msg: msg },
-          });
-    
-          setInputs({
-            email: "",
-            telephone: "",
-            name: "",
-            password: "",
-          });
-        } else {
-          setStatus({
-            info: { error: true, msg: msg },
-          });
-        }
-      };
-    
-      const handleOnChange = (e) => {
-        e.persist();
-        setInputs((prev) => ({
-          ...prev,
-          [e.target.id]: e.target.value,
-        }));
-    
-        setStatus({
-          submitted: false,
-          submitting: false,
-          info: { error: false, msg: null },
-        });
-      };
-    
-      const handleOnSubmit = (e) => {
-        e.preventDefault();
-        setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
-    
-        axios({
-          method: "POST",
-          url: "http://localhost:8080",
-          data: inputs,
-        })
-          .then((response) => {
-            handleServerResponse(true, "Merci, votre message a été soumis.");
-            // userAgent.push('/dashbord')
-          })
-    
-          .catch((error) => {
-            handleServerResponse(false, error.response.data.error);
-          });
-      };
+    } else {
+      setStatus({
+        info: { error: true, msg: msg },
+      });
+    }
+  };
 
+  const handleOnChange = (e) => {
+    e.persist();
+    setInputs((prev) => ({
+      ...prev,
+      [e.target.id]: e.target.value,
+    }));
+
+    setStatus({
+      submitted: false,
+      submitting: false,
+      info: { error: false, msg: null },
+    });
+  };
+
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+    setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
+
+    axios({
+      method: "POST",
+      url: "http://localhost:8080",
+      data: inputs,
+    })
+      .then((response) => {
+        handleServerResponse(true, "Merci, votre message a été soumis.");
+        // userAgent.push('/dashbord')
+      })
+
+      .catch((error) => {
+        handleServerResponse(false, error.response.data.error);
+      });
+  };
 
   return (
-    <NoLayout>
+    <div>
+      <div className="bg-footerBg w-full drop-shadow-2xl">
+        <h1 className="text-3xl pb-4 text-white text-center shadow-xl font-semibold pl-4 pt-4">
+          Inscription
+        </h1>
+      </div>
       <form
         onSubmit={handleOnSubmit}
         className=" m-auto grid gap-y-2 px-4 bg-white rounded-xl items-center p-5 justify-center"
@@ -158,12 +162,12 @@ export default function Register() {
             : "Signing up..."}
         </button>
       </form>
-    </NoLayout>
+    </div>
   );
+}
+
+Register.getLayout = (page) => {
+  return <NoLayout>{page}</NoLayout>;
 };
 
-Register.getLayout = (page) => {return <NoLayout>{page}</NoLayout>}
-
 // export default Register
-
-

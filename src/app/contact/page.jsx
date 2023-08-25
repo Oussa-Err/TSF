@@ -222,7 +222,7 @@ export default function Contact({}) {
             <div className="bg-slate-600 rounded-md font-extrabold h-[2px] hidden sm:block"></div>
             <p>
               TSF Fondation du Maroc – 81, Avenue Allal Ben Abdellah Hassane -
-              Rabat <br /> ET <br />
+              Rabat <br /> &amp; <br />
               199, Av. Ibn Sina, 31000 - Sefrou
             </p>
             <p>

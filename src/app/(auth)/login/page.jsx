@@ -75,13 +75,14 @@ export default function Login() {
 
   return (
     <div>
-      <NoLayout>
+      <div>
         <div className=" bg-white rounded-md overflow-y-hidden">
           <div className="m-auto   flex flex-col items-center justify-center">
-            <div className="text-center py-4">Connexion / Inscription</div>
-            <p className="text-center">
-              Saisissez votre e-mail pour vous connecter
-            </p>
+            <div className="bg-footerBg w-full drop-shadow-2xl">
+              <h1 className="text-3xl pb-4 text-white text-center shadow-xl font-semibold pl-4 pt-4">
+                Saisissez votre e-mail pour vous connecter 
+              </h1>
+            </div>
             <form
               onSubmit={handleOnSubmit}
               className="mt-5 m-auto grid gap-y-2 px-4 bg-white rounded-xl items-center p-5 justify-center"
@@ -149,22 +150,15 @@ export default function Login() {
               <small className="px-5">ou</small>
               <div className="h-[1px] w-auto md:w-10 bg-gray-600 rounded-lg"></div>
             </div>
-            <button className="text-white bg-red-400 h-14 px-4 mt-4  rounded-lg m-auto">
+            <button className="text-white bg-red-400 h-14 px-4 my-4  rounded-lg m-auto">
               <div>
                 Se connecter avec Google
                 <FontAwesomeIcon className="px-4" icon={faGoogle} />
               </div>
             </button>
-            <Link
-              className=" mt-8 px-4 py-2 m-auto cursor-pointer text-center font-mono  text-gray-700 hover:underline transition-all duration-200"
-              href={"/"}
-            >
-              retourner à la page d'acceuil
-            </Link>
           </div>
         </div>
-      </NoLayout>
+      </div>
     </div>
   );
-};
-
+}
