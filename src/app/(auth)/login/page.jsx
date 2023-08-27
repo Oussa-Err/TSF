@@ -4,9 +4,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import Link from "next/link.js";
 import React, { useState } from "react";
-import NoLayout from "../layout";
+import RootLayout from "../layout";
 
-export default function Login() {
+
+const Login = () => {
   const [status, setStatus] = useState({
     submitted: false,
     submitting: false,
@@ -74,13 +75,13 @@ export default function Login() {
   };
 
   return (
-    <div>
+    <RootLayout>
       <div>
         <div className=" bg-white rounded-md overflow-y-hidden">
           <div className="m-auto   flex flex-col items-center justify-center">
             <div className="bg-footerBg w-full drop-shadow-2xl">
               <h1 className="text-3xl pb-4 text-white text-center shadow-xl font-semibold pl-4 pt-4">
-                Saisissez votre e-mail pour vous connecter 
+                Saisissez votre e-mail pour vous connecter
               </h1>
             </div>
             <form
@@ -159,6 +160,12 @@ export default function Login() {
           </div>
         </div>
       </div>
-    </div>
+    </RootLayout>
   );
 }
+
+Login.getLayout = (page) => {
+  return <body>{page}</body>;
+};
+
+export default Login

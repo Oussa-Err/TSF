@@ -1,10 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import axios from "axios";
-import Link from "next/link.js";
-import NoLayout from "../layout";
 
-export default function Register() {
+const Register = () => {
   const [status, setStatus] = useState({
     submitted: false,
     submitting: false,
@@ -166,8 +164,6 @@ export default function Register() {
   );
 }
 
-Register.getLayout = (page) => {
-  return <NoLayout>{page}</NoLayout>;
-};
 
-// export default Register
+
+export default Register

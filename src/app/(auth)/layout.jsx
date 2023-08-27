@@ -1,3 +1,5 @@
-export default function NoLayout({ children }) {
-  return <section className="">{children}</section>;
+export default function RootLayout({children}){
+  return (
+    <div>{children}</div>
+  )
 }
