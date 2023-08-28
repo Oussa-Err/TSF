@@ -23,7 +23,7 @@ const poppins = Poppins({ subsets: ["devanagari"], weight: ["600"] });
 export default function RootLayout({children}) {
 
   return (
-    <html lang="fr">
+    <html lang="fr" style={{scrollBehavior:'smooth'}}>
       <body className="">
         <div className="lg:flex hidden h-10 bg-veryTop items-center relative z-30">
           <div className="w-screen flex justify-around ">

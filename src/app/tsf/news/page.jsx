@@ -17,6 +17,13 @@ export default async function News() {
      setPage(no)
   }
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
 
   return (
     <div className="sm:pr-4 ">
@@ -68,7 +75,7 @@ export default async function News() {
           <ul className=" flex justify-center item  -space-x-px text-sm">
             <li
                 className={page === 1? 'hidden' : ` cursor-pointer flex items-center justify-center px-3 h-8 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white`}
-                onClick={() => setPageHandler(page - 1)}
+                onClick={() => {setPageHandler(page - 1), scrollToTop()}}
               >
                 précédent
               </li>
@@ -79,7 +86,7 @@ export default async function News() {
                 aria-current={page}
                   className={page === i+1 ?`flex items-center justify-center px-3 h-8 text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white`: ' cursor-pointer flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white'}
                   key={i}
-                  onClick={() => setPageHandler(i + 1)}
+                  onClick={() => {setPageHandler(i + 1), scrollToTop()}}
                 >
                   {i + 1}
                 </li>
@@ -88,7 +95,7 @@ export default async function News() {
             <li>
               <li
                 className={page === (Math.round(newsItem.length / 4))? 'hidden' : ` cursor-pointer flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white`}
-                onClick={() => setPageHandler(page + 1)}
+                onClick={() => {setPageHandler(page + 1), scrollToTop()}}
               >
                 suivant
               </li>
