@@ -8,7 +8,7 @@ export default function Home({}) {
     <main className="bg-gradient-to-b from-heroBg to-white md:rounded-tr-lg md:rounded-tl-lg  overflow-hidden">
       <div className="flex flex-col">
         <div className="xl:flex-row  flex  flex-col">
-          <div className="bg-footerBg w-full flex flex-col flex-1 justify-center py-10">
+          <div className="bg-[#3C5B6F] w-full flex flex-col flex-1 justify-center py-10">
             <h1 className="font-extrabold text-2xl sm:text-3xl pt-4 lg:pt-0 lg:text-4xl px-5  text-white">
               Fondation TSF: <br />
               <span className="text-white">
@@ -32,7 +32,7 @@ export default function Home({}) {
         <div>
           <p className="md:text-center p-7 font-thin bg-slate-50 text-lg text-gray-700 pb-8 px-4">
             La Fondation TSF&nbsp;
-            <span className="font-bold text-orange-700">
+            <span className="font-bold text-[#948979]">
               Fondation des Scientifiques Marocains et à l'Etranger:
             </span>
             &nbsp; Ce sont les chercheurs, les professeurs, les experts, les
@@ -41,9 +41,11 @@ export default function Home({}) {
             l'innovation dans toutes les activités humaines , ainsi que de la
             ville durable, connectée et accessible. La Fondation TSF des
             Scientifiques Marocains à l'étranger est au service de cette
-            excellence!🇲🇦🇦🇺🇨🇦🇫🇷🇧🇸🇺🇸🇪🇺🇧🇷🇮🇹🇩🇪🇯🇵🇨🇳🇷🇺🇬🇧
+            excellence!
+            < br />
+            🇲🇦 🇦🇺 🇨🇦 🇫🇷 🇧🇸 🇺🇸 🇪🇺 🇧🇷 🇮🇹 🇩🇪 🇯🇵 🇨🇳 🇷🇺 🇬🇧
           </p>
-          <div className="h-3 bg-slate-600"></div>
+          <div className="h-3 bg-[#DFD0B8]"></div>
         </div>
       </div>
 
@@ -51,7 +53,7 @@ export default function Home({}) {
         <h1 className="text-slate-900 font-extrabold text-2xl pt-11">
           Nos actualités
         </h1>
-        <div className="bg-veryTop h-1 w-full rounded-md mt-2"> </div>
+        <div className="bg-[#153448] h-1 w-full rounded-md mt-2"> </div>
 
         <div className="my-4">
           <ul className="gap-5 py-10 grid grid-cols-1 md:grid-cols-2 justify-center">
@@ -70,7 +72,7 @@ export default function Home({}) {
                   />
                   <div className="flex-1">
                     <p className="text-slate-600 font-mono pb-4">{news.date}</p>
-                    <p className="pr-3 font-bold text-blue-950 hover:text-red-500 transition-all duration-200 ">
+                    <p className="pr-3 font-bold text-blue-950 hover:text-[#948979] transition-all duration-200 ">
                       {news.title}
                     </p>
                   </div>

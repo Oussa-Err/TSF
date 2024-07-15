@@ -21,7 +21,7 @@ const Register = () => {
       setStatus({
         submitted: true,
         submitting: false,
-        info: { error: false, msg: msg },
+        info: { error: false, msg },
       });
 
       setInputs({
@@ -32,7 +32,7 @@ const Register = () => {
       });
     } else {
       setStatus({
-        info: { error: true, msg: msg },
+        info: { error: true, msg },
       });
     }
   };
@@ -46,7 +46,7 @@ const Register = () => {
 
     setStatus({
       submitted: false,
-      submitting: false,
+      submitting: true,
       info: { error: false, msg: null },
     });
   };
@@ -57,16 +57,14 @@ const Register = () => {
 
     axios({
       method: "POST",
-      url: "http://localhost:8080",
+      url: "http://localhost:8080/users/login",
       data: inputs,
     })
       .then((response) => {
         handleServerResponse(true, "Merci, votre message a été soumis.");
-        // userAgent.push('/dashbord')
       })
-
       .catch((error) => {
-        handleServerResponse(false, error.response.data.error);
+        handleServerResponse(false, error);
       });
   };
 

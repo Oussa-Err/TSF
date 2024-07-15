@@ -1,24 +1,29 @@
-"use client"
+"use client";
 import axios from "axios";
 import React, { useState } from "react";
 
 const NewsLetter = () => {
-
-  const [email, setEmail] = useState()
-
-
-
+  const [email, setEmail] = useState();
 
   return (
-    <div className="flex flex-col md:flex-row bg-slate-300 p-2 gap-4 justify-around items-center">
+    <div className="flex flex-col md:flex-row bg-[#948979] p-2 gap-4 justify-around items-center">
       <div>
-        <h1 className="font-extrabold text-[1.5rem] text-violet-950 text-center">SOUSCRIRE À LA NEWSLETTER</h1>
+        <h1 className="font-extrabold text-[1.5rem] text-white text-center">
+          SOUSCRIRE À LA NEWSLETTER
+        </h1>
       </div>
       <div className="flex md:flex-row flex-col items-center gap-3">
         <form action="post">
-          <input type="email" name="your-email" placeholder=" Email"  className='border-2 focus:border-violet-950 focus:outline-none'/>
+          <input
+            type="email"
+            name="your-email"
+            placeholder=" Email"
+            className="border-2 focus:border-violet-950 focus:outline-none"
+          />
         </form>
-        <button className="p-3 bg-orange-400 rounded-md hover:scale-105">SOUSCRIRE</button>
+        <button className="p-3 bg-orange-400 rounded-md hover:scale-105">
+          SOUSCRIRE
+        </button>
       </div>
     </div>
   );

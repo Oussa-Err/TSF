@@ -7,9 +7,9 @@ const Map = () => {
   });
 
   const markers = [
-    { lat: 13.7411, lng: 56.155663348132094 }, 
-    { lat: 13.75, lng: 56.16 }, 
-    { lat: 13.73, lng: 56.15 }, 
+    { lat: 33.59545184820839, lng: -7.613939868192454 }, 
+    { lat: 33.82837058849689, lng: -4.831578346494165 }, 
+    { lat: 48.83411031609412, lng: 2.365055324449277 }, 
   ];
 
   if (!isLoaded) {
@@ -24,7 +24,7 @@ const Map = () => {
   }
 
   return (
-    <GoogleMap zoom={13} center={markers[0]} mapContainerClassName="h-[400px] w-full my-[30px] px-[30px] border-4 border-white sm:rounded-lg">
+    <GoogleMap zoom={3} center={markers[0]} mapContainerClassName="h-[400px] w-full my-[30px] px-[30px] border-4 border-white sm:rounded-lg">
       {markers.map((marker, index) => (
         <Marker key={index} position={marker} />
       ))}

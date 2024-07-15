@@ -2,11 +2,11 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className="flex w-full text-white bg-footerBg">
-      <footer className=" flex text-sm flex-col justify-start gap-6 text-start items-start pb-4  md:items-start sm:p-5  lg:flex-row md:py-6 ">
-        <div>
+    <div className="flex justify-around w-full bg-[#DFD0B8] ">
+      <footer className="flex text-sm flex-col gap-6 text-start pb-4 sm:p-5 lg:flex-row md:py-6">
+        <div className="self-center">
           <Image
-            className="object-cover self-center"
+            className="object-cover "
             src="/assets/tsf-logo.png"
             alt="adf logo"
             width={400}
@@ -15,15 +15,16 @@ const Footer = () => {
         </div>
         <div className="p-2 flex flex-col md:flex-row gap-10 ">
           <div className="flex flex-1 flex-col gap-3">
-            <h2 className="text-lg font-extrabold">Adresses</h2>
+            <h2 className="text-lg font-extrabold">Adresse</h2>
             <hr className="bg-black" />
             <p>
-              TSF Fondation du Maroc – 81, Avenue Allal Ben Abdellah Hassane -
-              Rabat <br/> ET <br/>199, Av. Ibn Sina, 31000 - Sefrou
+              81, Avenue Allal Ben Abdellah Hassane - Rabat
             </p>
             <p>
-              TSF Fondation du France – 55, Bd Vincent Auriol, 75013 Paris –
-              Paris
+              199, Av. Ibn Sina, 31000 - Sefrou
+            </p>
+            <p>
+              55, Bd Vincent Auriol, 75013 - Paris
             </p>
           </div>
           <div className="flex flex-1 flex-col gap-4">
@@ -37,7 +38,7 @@ const Footer = () => {
             <hr className="bg-black" />
             <p>Rabat: +212 661-178118</p>
             <p>Paris: +33 6 52 80 61 34</p>
-            <p>Academy.sciences.TSF@gmail.com</p>
+            <p>Academy.sciences.tsf@gmail.com</p>
           </div>
         </div>
       </footer>

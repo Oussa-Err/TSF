@@ -14,17 +14,13 @@ import Map from "../component/Map";
 export default function Contact({}) {
   const [status, setStatus] = useState({
     submitted: false,
-
     submitting: false,
-
     info: { error: false, msg: null },
   });
 
   const [inputs, setInputs] = useState({
     email: "",
-
     message: "",
-
     telephone: "",
   });
 
@@ -32,19 +28,14 @@ export default function Contact({}) {
     if (ok) {
       setStatus({
         submitted: true,
-
         submitting: false,
-
         info: { error: false, msg: msg },
       });
 
       setInputs({
         email: "",
-
         message: "",
-
         telephone: "",
-
         name: "",
       });
     } else {
@@ -59,39 +50,27 @@ export default function Contact({}) {
 
     setInputs((prev) => ({
       ...prev,
-
       [e.target.id]: e.target.value,
     }));
 
     setStatus({
       submitted: false,
-
       submitting: false,
-
       info: { error: false, msg: null },
     });
   };
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
-
     setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
-
     axios({
       method: "POST",
-
       url: process.env.NEXT_PIPEDREAM_URL,
-
       data: inputs,
     })
       .then((response) => {
-        handleServerResponse(
-          true,
-
-          "Merci, votre message a été soumis."
-        );
+        handleServerResponse(true, "Merci, votre message a été soumis.");
       })
-
       .catch((error) => {
         handleServerResponse(false, error.response.data.error);
       });
@@ -113,12 +92,11 @@ export default function Contact({}) {
           icon={faLinkedin}
         />
       </div>
-
-      <div className="bg-anchor drop-shadow-2xl">
+      {/* <div className="bg-[#3C5B6F] drop-shadow-2xl">
         <h1 className="text-3xl pb-4 text-white text-center shadow-xl font-semibold pl-4 pt-4">
           Contactez nous
         </h1>
-      </div>
+      </div> */}
 
       <div className="bg-slate-100 md:p-10  flex flex-col lg:flex-row">
         <div className="flex-1">
@@ -128,9 +106,9 @@ export default function Contact({}) {
           >
             <label
               htmlFor="tel"
-              className="text-gray-600 text-xs font-semibold uppercase"
+              className="text-gray-600  font-semibold uppercase"
             >
-              Nom*
+              Nom
             </label>
             <input
               id="name"
@@ -144,9 +122,9 @@ export default function Contact({}) {
 
             <label
               htmlFor="tel"
-              className="text-gray-600 text-xs font-semibold uppercase"
+              className="text-gray-600  font-semibold uppercase"
             >
-              Téléphone*
+              Téléphone
             </label>
             <input
               id="telephone"
@@ -160,9 +138,9 @@ export default function Contact({}) {
 
             <label
               htmlFor="email"
-              className="text-gray-600 text-xs font-semibold uppercase"
+              className="text-gray-600  font-semibold uppercase"
             >
-              Email*
+              Email
             </label>
             <input
               id="email"
@@ -176,9 +154,9 @@ export default function Contact({}) {
 
             <label
               htmlFor="message"
-              className="text-gray-600 text-xs font-semibold uppercase"
+              className="text-gray-600  font-semibold uppercase"
             >
-              Message*
+              Message
             </label>
             <textarea
               id="message"
@@ -195,7 +173,7 @@ export default function Contact({}) {
               className={`${
                 status.submitting
                   ? "bg-gray-400 cursor-not-allowed"
-                  : "bg-blue-500 hover:bg-blue-700"
+                  : "bg-[#3C5B6F] hover:bg-[#948979]"
               } text-white px-4 py-2 rounded font-semibold transition-all duration-200`}
             >
               {!status.submitting
@@ -211,7 +189,6 @@ export default function Contact({}) {
               Error: {status.info.msg}
             </div>
           )}
-
           {!status.info.error && status.info.msg && (
             <p className="mt-2">{status.info.msg}</p>
           )}
@@ -222,12 +199,11 @@ export default function Contact({}) {
             <div className="bg-slate-600 rounded-md font-extrabold h-[2px] hidden sm:block"></div>
             <p>
               TSF Fondation du Maroc – 81, Avenue Allal Ben Abdellah Hassane -
-              Rabat <br /> &amp; <br />
-              199, Av. Ibn Sina, 31000 - Sefrou
+              Rabat <br />
             </p>
+            <p>199, Av. Ibn Sina, 31000 - Sefrou</p>
             <p>
-              TSF Fondation du France – 55, Bd Vincent Auriol, 75013 Paris –
-              Paris
+              TSF Fondation du France – 55, Bd Vincent Auriol, 75013 - Paris
             </p>
           </div>
           <div className="flex-1">
