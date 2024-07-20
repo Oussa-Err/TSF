@@ -19,9 +19,10 @@ export default function Contact({}) {
   });
 
   const [inputs, setInputs] = useState({
+    name: "",
+    tel: "",
     email: "",
     message: "",
-    telephone: "",
   });
 
   const handleServerResponse = (ok, msg) => {
@@ -33,10 +34,10 @@ export default function Contact({}) {
       });
 
       setInputs({
+        name: "",
         email: "",
         message: "",
-        telephone: "",
-        name: "",
+        tel: "",
       });
     } else {
       setStatus({
@@ -46,7 +47,7 @@ export default function Contact({}) {
   };
 
   const handleOnChange = (e) => {
-    e.persist();
+    e.preventDefault();
 
     setInputs((prev) => ({
       ...prev,
@@ -60,14 +61,12 @@ export default function Contact({}) {
     });
   };
 
-  const handleOnSubmit = (e) => {
+  const handleOnSubmit = async (e) => {
     e.preventDefault();
     setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
-    axios({
-      method: "POST",
-      url: process.env.NEXT_PIPEDREAM_URL,
-      data: inputs,
-    })
+
+    const response = await axios
+      .post("/api/contact", inputs)
       .then((response) => {
         handleServerResponse(true, "Merci, votre message a été soumis.");
       })
@@ -92,11 +91,11 @@ export default function Contact({}) {
           icon={faLinkedin}
         />
       </div>
-      {/* <div className="bg-[#3C5B6F] drop-shadow-2xl">
+      <div className="bg-[#3C5B6F] drop-shadow-2xl">
         <h1 className="text-3xl pb-4 text-white text-center shadow-xl font-semibold pl-4 pt-4">
           Contactez nous
         </h1>
-      </div> */}
+      </div>
 
       <div className="bg-slate-100 md:p-10  flex flex-col lg:flex-row">
         <div className="flex-1">
@@ -108,18 +107,19 @@ export default function Contact({}) {
               htmlFor="tel"
               className="text-gray-600  font-semibold uppercase"
             >
-              Nom
+              Nom et Prénom
             </label>
             <input
               id="name"
               type="name"
-              name="_replyto"
+              name="name"
+              maxLength={50}
               onChange={handleOnChange}
+              autoComplete="given-name"
               required
               value={inputs.name}
               className="border border-gray-300 rounded px-2 py-1 transition-all duration-200 focus:outline-none focus:border-blue-500 w-full md:w-auto"
             />
-
             <label
               htmlFor="tel"
               className="text-gray-600  font-semibold uppercase"
@@ -127,15 +127,15 @@ export default function Contact({}) {
               Téléphone
             </label>
             <input
-              id="telephone"
+              id="tel"
               type="tel"
-              name="_replyto"
+              autoComplete="tel-national"
+              name="tel"
               onChange={handleOnChange}
               required
-              value={inputs.telephone}
+              value={inputs.tel}
               className="border border-gray-300 rounded px-2 py-1 transition-all duration-200 focus:outline-none focus:border-blue-500 w-full md:w-auto"
             />
-
             <label
               htmlFor="email"
               className="text-gray-600  font-semibold uppercase"
@@ -145,13 +145,14 @@ export default function Contact({}) {
             <input
               id="email"
               type="email"
-              name="_replyto"
+              maxLength={80}
+              autoComplete="given-email"
+              name="email"
               onChange={handleOnChange}
               required
               value={inputs.email}
               className="border border-gray-300 rounded py-1 px-2 transition-all duration-200 focus:outline-none focus:border-blue-500 w-full md:w-auto"
             />
-
             <label
               htmlFor="message"
               className="text-gray-600  font-semibold uppercase"
@@ -164,7 +165,7 @@ export default function Contact({}) {
               onChange={handleOnChange}
               required
               value={inputs.message}
-              className="border border-gray-300 rounded px-2 py-1 transition-all duration-200 focus:outline-none focus:border-blue-500 w-full md:w-auto"
+              className="border border-gray-300 rounded px-2 py-1 transition-all duration-100 focus:outline-none focus:border-blue-500 w-full md:w-auto"
             />
             <button
               type="submit"
@@ -182,7 +183,6 @@ export default function Contact({}) {
                 : "Submitting..."}
             </button>
           </form>
-
           {status.info.error && (
             <div className="error bg-red-600 text-white text-center py-2 mt-4 max-w-3xl">
               Error: {status.info.msg}

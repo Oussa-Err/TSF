@@ -14,7 +14,7 @@ export default function Gouvernance() {
         <div className="flex flex-col-reverse xl:flex-row gap-4  justify-center items-center">
           <Image
             className="flex-1 md:w-4/5 border-white border-4"
-            src="/assets/benmoussa.jpeg"
+            src="/assets/sonExcellence.jpeg"
             alt="Men"
             width={500}
             height={500}
