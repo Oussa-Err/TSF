@@ -1,30 +1,91 @@
 "use client";
-import axios from "axios";
-import React, { useState } from "react";
+import { useState } from "react";
+import newsLetterApi from "../api/newsLetterApi";
 
 const NewsLetter = () => {
-  const [email, setEmail] = useState();
+  const [email, setEmail] = useState("");
+  const [subscribed, setSubscribed] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
+  const [status, setStatus] = useState({
+    submitted: false,
+    submitting: false,
+  });
 
-  return (
-    <div className="flex flex-col md:flex-row bg-[#948979] p-2 gap-4 justify-around items-center">
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    setStatus({
+      submitted: false,
+      submitting: true,
+    });
+    await newsLetterApi(email).then((data) => {
+      if (data.status === "success") {
+        setSubscribed(true);
+        setStatus({
+          submitted: true,
+          submitting: false,
+        });
+      } else if (data.status === "error") {
+        setErrorMsg(data.errMsg.email);
+        setStatus({
+          submitted: false,
+          submitting: false,
+        });
+      }
+    });
+  };
+
+  const handleOnChange = (e) => {
+    setEmail(e.target.value);
+    setStatus({
+      submitted: false,
+      submitting: false,
+    });
+  };
+
+  return subscribed ? (
+    <div className="flex flex-col md:flex-row bg-[#40813f] p-2 gap-4 justify-around items-center text-center text-white font-extrabold">
+      <h1>Merci de votre intérêt pour la Fondation TSF !</h1>
+    </div>
+  ) : (
+    <div className="flex flex-col md:flex-row bg-[#948979] p-5 gap-4 justify-around items-center">
       <div>
         <h1 className="font-extrabold text-[1.5rem] text-white text-center">
-          SOUSCRIRE À LA NEWSLETTER
+          <span className="text-[#153448]">S'inscrire à notre newsletter</span><br />
+          pour rester informé des avancées et initiatives de la Fondation TSF
         </h1>
       </div>
-      <div className="flex md:flex-row flex-col items-center gap-3">
-        <form action="post">
-          <input
-            type="email"
-            name="your-email"
-            placeholder=" Email"
-            className="border-2 focus:border-violet-950 focus:outline-none"
-          />
-        </form>
-        <button className="p-3 bg-orange-400 rounded-md hover:scale-105">
-          SOUSCRIRE
+      <form
+        className="flex md:flex-row flex-col items-center gap-5"
+        action="post"
+        onSubmit={handleSubmit}
+      >
+        <input
+          className="border-2 focus:outline-none"
+          type="email"
+          name="your-email"
+          placeholder="Email"
+          value={email}
+          onChange={handleOnChange}
+          required
+        />
+        <div>{errorMsg}</div>
+        <button
+          type="submit"
+          disabled={status.submitting}
+          className={`bg-[#DFD0B8] text-slate-600 ${
+            status.submitting
+              ? "bg-gray-400 cursor-not-allowed"
+              : "bg-[#948979] hover:bg-[#cab593] hover:text-slate-900"
+          } px-4 py-2 rounded font-semibold transition-all duration-200`}
+        >
+          {!status.submitting
+            ? !status.submitted
+              ? "Souscrire"
+              : "Souscrit"
+            : "Submitting..."}
         </button>
-      </div>
+      </form>
     </div>
   );
 };

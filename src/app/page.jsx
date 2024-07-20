@@ -30,19 +30,19 @@ export default function Home({}) {
         </div>
 
         <div>
-          <p className="md:text-center p-7 font-thin bg-slate-50 text-lg text-gray-700 pb-8 px-4">
+          <p className="md:text-center p-7 bg-slate-50 text-gray-700 pb-8 px-4">
             La Fondation TSF&nbsp;
-            <span className="font-bold text-[#948979]">
-              Fondation des Scientifiques Marocains et à l'Etranger:
+            <span className="text-[#948979]">
+              Fondation des Scientifiques Marocains et à l'Etranger,
             </span>
             &nbsp; Ce sont les chercheurs, les professeurs, les experts, les
             bâtisseurs et les entrepreneurs qui répondent aux formidables défis
             du Maroc et de l'Afrique, les défis de l'Excellence Éducative et de
-            l'innovation dans toutes les activités humaines , ainsi que de la
+            l'innovation dans toutes les activités humaines, ainsi que de la
             ville durable, connectée et accessible. La Fondation TSF des
             Scientifiques Marocains à l'étranger est au service de cette
             excellence!
-            < br />
+            <br />
             🇲🇦 🇦🇺 🇨🇦 🇫🇷 🇧🇸 🇺🇸 🇪🇺 🇧🇷 🇮🇹 🇩🇪 🇯🇵 🇨🇳 🇷🇺 🇬🇧
           </p>
           <div className="h-3 bg-[#DFD0B8]"></div>
@@ -54,7 +54,6 @@ export default function Home({}) {
           Nos actualités
         </h1>
         <div className="bg-[#153448] h-1 w-full rounded-md mt-2"> </div>
-
         <div className="my-4">
           <ul className="gap-5 py-10 grid grid-cols-1 md:grid-cols-2 justify-center">
             {news.map((news) => (

@@ -7,24 +7,32 @@ const Map = () => {
   });
 
   const markers = [
-    { lat: 33.59545184820839, lng: -7.613939868192454 }, 
-    { lat: 33.82837058849689, lng: -4.831578346494165 }, 
-    { lat: 48.83411031609412, lng: 2.365055324449277 }, 
+    { lat: 33.59545184820839, lng: -7.613939868192454 },
+    { lat: 33.82837058849689, lng: -4.831578346494165 },
+    { lat: 48.83411031609412, lng: 2.365055324449277 },
   ];
 
   if (!isLoaded) {
     return (
-      <div className="lds-ring h-full m-auto">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+      <div className="flex justify-center">
+        <div className="bg-slate-700 h-[7rem] w-72 rounded-lg flex flex-col items-center justify-center">
+          <div className="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
       </div>
     );
   }
 
   return (
-    <GoogleMap zoom={3} center={markers[0]} mapContainerClassName="h-[400px] w-full my-[30px] px-[30px] border-4 border-white sm:rounded-lg">
+    <GoogleMap
+      zoom={3}
+      center={markers[0]}
+      mapContainerClassName="h-[400px] w-full my-[30px] px-[30px] border-4 border-white sm:rounded-lg"
+    >
       {markers.map((marker, index) => (
         <Marker key={index} position={marker} />
       ))}

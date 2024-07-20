@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelopeOpenText, faPhone } from "@fortawesome/free-solid-svg-icons";
+// import { faEnvelopeOpenText, faPhone } from "@fortawesome/free-solid-svg-icons";
 import {
   faWhatsapp,
   faFacebook,
@@ -77,7 +77,7 @@ export default function Contact({}) {
   };
 
   return (
-    <main>
+    <>
       <div className="flex justify-center items-center pt-4 sm:p-0 h-14  mx-28">
         <FontAwesomeIcon
           className="px-5 text-2xl hover:scale-125 hover:text-blue-800 hover:cursor-pointer"
@@ -166,19 +166,18 @@ export default function Contact({}) {
               value={inputs.message}
               className="border border-gray-300 rounded px-2 py-1 transition-all duration-200 focus:outline-none focus:border-blue-500 w-full md:w-auto"
             />
-
             <button
               type="submit"
               disabled={status.submitting}
               className={`${
                 status.submitting
                   ? "bg-gray-400 cursor-not-allowed"
-                  : "bg-[#3C5B6F] hover:bg-[#948979]"
+                  : "bg-[#948979] hover:bg-[#DFD0B8] hover:text-slate-600"
               } text-white px-4 py-2 rounded font-semibold transition-all duration-200`}
             >
               {!status.submitting
                 ? !status.submitted
-                  ? "Submit"
+                  ? "Envoyer"
                   : "Submitted"
                 : "Submitting..."}
             </button>
@@ -193,24 +192,19 @@ export default function Contact({}) {
             <p className="mt-2">{status.info.msg}</p>
           )}
         </div>
-        <div className="">
-          <div className="flex flex-1 flex-col gap-3 pt-5 px-3 md:px-0">
-            <h2 className="text-lg font-extrabold text-black">Location</h2>
+        <div className="flex-1">
+          <div className="flex flex-col gap-3 pt-5 px-3 md:px-0">
+            <h2 className="text-2xl font-extrabold text-gray-600">Location</h2>
             <div className="bg-slate-600 rounded-md font-extrabold h-[2px] hidden sm:block"></div>
-            <p>
-              TSF Fondation du Maroc – 81, Avenue Allal Ben Abdellah Hassane -
-              Rabat <br />
-            </p>
-            <p>199, Av. Ibn Sina, 31000 - Sefrou</p>
-            <p>
-              TSF Fondation du France – 55, Bd Vincent Auriol, 75013 - Paris
-            </p>
+            <p>Rabat - 81, Avenue Allal Ben Abdellah Hassane</p>
+            <p>Sefrou - 199, Av. Ibn Sina, 31000</p>
+            <p>Paris - 55, Bd Vincent Auriol, 75013</p>
           </div>
           <div className="flex-1">
             <Map />
           </div>
         </div>
       </div>
-    </main>
+    </>
   );
 }
