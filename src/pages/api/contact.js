@@ -29,7 +29,7 @@ export default async function POST(req, res) {
         const mail = await transporter.sendMail({
             from: `TSF Foundation`,
             to: 'scientifiquesaletranger@gmail.com',
-            subject: `Website activity from ${email}`,
+            subject: `TSF foundation message received`,
             html: `
                 <p>Name: ${name} </p>
                 <p>telephone: ${tel} </p>
