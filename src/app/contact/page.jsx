@@ -9,7 +9,9 @@ import {
   faYoutube,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import Map from "../component/Map";
+import dynamic from "next/dynamic";
+
+const Map = dynamic(() => import("../component/Map"), { ssr: false });
 
 export default function Contact({}) {
   const [status, setStatus] = useState({
@@ -62,7 +64,7 @@ export default function Contact({}) {
   };
 
   const handleOnSubmit = async (e) => {
-    e.preventDefault();
+    e.persist();
     setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
 
     const response = await axios
