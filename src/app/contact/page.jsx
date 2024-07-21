@@ -64,7 +64,7 @@ export default function Contact({}) {
   };
 
   const handleOnSubmit = async (e) => {
-    e.persist();
+    e.preventDefault();
     setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
 
     const response = await axios
@@ -73,7 +73,7 @@ export default function Contact({}) {
         handleServerResponse(true, "Merci, votre message a été soumis.");
       })
       .catch((error) => {
-        handleServerResponse(false, error.response.data.error);
+        handleServerResponse(false, "Echec d'envoi. Veuillez réessayer plus tard.");
       });
   };
 
