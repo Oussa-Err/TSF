@@ -28,8 +28,7 @@ export default async function POST(req, res) {
     try {
         const mail = await transporter.sendMail({
             from: `TSF Foundation`,
-            // to: 'scientifiquesaletranger@gmail.com',
-            to: "dexterlecter0@gmail.com",
+            to: 'scientifiquesaletranger@gmail.com',
             subject: `TSF foundation message received`,
             html: `
                 <p>Name: ${name} </p>
