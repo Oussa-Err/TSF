@@ -38,7 +38,7 @@ export default async function News() {
           {newsItem.slice(page * 4 - 4, page * 4).map((news) => (
             <li
               key={news.id}
-              className="w-full sm:w-3/4  flex flex-col gap-7 pt-4 bg-white rounded-xl  items-start justify-center"
+              className="w-full sm:w-3/4  flex flex-col gap-7 pt-4 bg-white rounded-xl  items-center justify-center"
             >
               <Link href={`/tsf/news/${news.id}`}>
                 <Image
@@ -74,7 +74,7 @@ export default async function News() {
         {newsItem.length > 0 && (
           <ul className=" flex justify-center item  -space-x-px text-sm">
             <li
-                className={page === 1? 'hidden' : ` cursor-pointer flex items-center justify-center px-3 h-8 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white`}
+                className={page === 1? 'hidden' : ` cursor-pointer flex items-center justify-center px-3 h-8 ml-0 leading-tight border-gray-300 rounded-l-lg bg-[#948979]  hover:bg-gray-700 text-white`}
                 onClick={() => {setPageHandler(page - 1), scrollToTop()}}
               >
                 précédent
@@ -84,7 +84,7 @@ export default async function News() {
               return (
                 <li
                 aria-current={page}
-                  className={page === i+1 ?`flex items-center justify-center px-3 h-8 text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white`: ' cursor-pointer flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white'}
+                  className={page === i+1 ?`flex items-center justify-center px-3 h-8 border-gray-300 bg-[#DFD0B8] text-blue-700`: ' cursor-pointer flex items-center justify-center px-3 h-8 leading-tight  bg-[#948979] hover:bg-gray-700 text-white'}
                   key={i}
                   onClick={() => {setPageHandler(i + 1), scrollToTop()}}
                 >
@@ -94,7 +94,7 @@ export default async function News() {
             })}
             <li>
               <li
-                className={page === (Math.round(newsItem.length / 4))? 'hidden' : ` cursor-pointer flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white`}
+                className={page === (Math.round(newsItem.length / 4))? 'hidden' : ` cursor-pointer flex items-center justify-center px-3 h-8 leading-tight bg-[#948979] hover:bg-gray-700 text-white`}
                 onClick={() => {setPageHandler(page + 1), scrollToTop()}}
               >
                 suivant
