@@ -37,7 +37,7 @@ export default async function POST(req, res) {
                 <p>Message: ${message} </p>
             `,
         })
-        res.status(200).json({ message: "Success: email was sent" })
+        res.status(200).json({ message: "email was sent" })
     } catch (error) {
         console.log(error)
         res.status(500).json({ message: "COULD NOT SEND MESSAGE" })

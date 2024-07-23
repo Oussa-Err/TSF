@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Link from "next/link";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -16,7 +16,8 @@ const Header = () => {
   const [toggle, setToggle] = useState(false);
   const [dropToggle, setDropToggle] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const [animateMenu, setAnimateMenu] = useState(false);
+  const menuRef = useRef(null);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
 
@@ -41,7 +42,7 @@ const Header = () => {
             />
           </Link>
         </div>
-        <nav className="hidden lg+:flex p-7 relative gap-5 text-[1.2rem] opacity-80 font-bold tracking-[1px] ">
+        <nav className="hidden lg:flex p-7 relative gap-5 text-[1.2rem] opacity-80 font-bold tracking-[1px] ">
           <Link
             href="/"
             className="relative px-4 pb-2 text-gray-800 after:content-[''] after:bg-[#153448]  after:h-[4px] after:w-[0%]  after:left-3 after:bottom-1 after:rounded-xl after:absolute  after:duration-100 after:ease-in hover:scale-105 after:hover:w-[90px]"
@@ -85,15 +86,15 @@ const Header = () => {
           </div> */}
         </nav>
 
-        <div className="lg+:hidden flex w-full justify-end pr-5 ">
+        <div className="lg:hidden flex w-full justify-end pr-5 ">
           {toggle ? (
             <FontAwesomeIcon
-              className="hover:cursor-pointer relative z-50 "
+              className="hover:cursor-pointer relative z-50 top-5"
               icon={faClose}
               color="#black"
               size="2x"
               onClick={() => {
-                setToggle(false), toggleMenu();
+                setToggle(false), toggleMenu(), setAnimateMenu(!animateMenu);
               }}
             />
           ) : (
@@ -103,12 +104,16 @@ const Header = () => {
               color="#black"
               size="2x"
               onClick={() => {
-                setToggle(true), toggleMenu();
+                setToggle(true), toggleMenu(), setAnimateMenu(!animateMenu);
               }}
             />
           )}
           {toggle && (
-            <div className="bg-slate-700 bg-opacity-50 pt-10 md:pt-0 absolute w-screen h-screen top-0 items-start pl-9 md:pl-0 right-0 z-40 flex md:justify-around md:items-center backdrop-blur-xl">
+           <div
+           ref={menuRef}
+           className={`bg-slate-700 bg-opacity-50 pt-10 md:pt-0 absolute w-screen h-screen top-0 pl-9 md:pl-0 right-0 z-40 flex justify-around items-center backdrop-blur-xl 
+            ${toggle ? "animate-open-toggle-menu" : "animate-close-toggle-menu"}`
+           }>
               <div className="flex flex-col z-10 gap-4 md:gap-10 text-white">
                 <div className="text-2xl py-3 pr-14 pt-10 font-extrabold drop-shadow-lg">
                   TRINATIONAL SCIENTIFIQUE FOUNDATION
@@ -144,7 +149,7 @@ const Header = () => {
                   )}
                 </div>
                 {dropToggle && (
-                  <div className="relative w-fit bg-white bg-opacity-30 rounded-lg p-2 md:p-6 flex flex-col transition-all ease-in-out duration-200">
+                  <div className="relative w-fit bg-white bg-opacity-30 rounded-lg p-2 md:p-6 flex flex-col">
                     {subHeaderLinks.map((item, index) => (
                       <Link
                         key={index}

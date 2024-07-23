@@ -31,9 +31,8 @@ export default function Home({}) {
 
         <div>
           <p className="md:text-center p-7 bg-slate-50 text-gray-700 pb-8 px-4">
-            La Fondation TSF&nbsp;
-            <span className="text-[#948979]">
-              Fondation des Scientifiques Marocains et à l'Etranger,
+            <span className="text-[#FF7F3E]">
+              La Fondation des Scientifiques Marocains et à l'Etranger,
             </span>
             &nbsp; Ce sont les chercheurs, les professeurs, les experts, les
             bâtisseurs et les entrepreneurs qui répondent aux formidables défis

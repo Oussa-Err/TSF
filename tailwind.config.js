@@ -13,6 +13,18 @@ module.exports = {
           'from': { opacity: '0' },
           'to': { opacity: '1' },
         },
+        "open-toggle-menu": {
+          "from": { opacity: 0, transform: "translateX(-100%)" },
+          'to': { opacity: 1, transform: 'translateX(0)' },
+        },
+        'close-toggle-menu': {
+          "from": {opacity: 1, transform: "translateX(100%)" },
+          'to': {opacity: 1, transform: 'translateX(0)' },
+        },
+      },
+      animation: {
+        'close-toggle-menu': 'close-toggle-menu ease-in-out 0.5s',
+        'open-toggle-menu': 'open-toggle-menu ease-in-out 0.5s',
       },
       colors: {
         'heroBg': '#C9CCD5',

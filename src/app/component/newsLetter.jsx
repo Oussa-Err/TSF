@@ -19,7 +19,7 @@ const NewsLetter = () => {
         submitting: false,
       });
     } else {
-      setErrorMsg("Veuiller enter un email valide");
+      setErrorMsg("Veuiller entrer un email valide");
       setStatus({
         submitted: false,
         submitting: false,
@@ -37,13 +37,11 @@ const NewsLetter = () => {
     const response = await axios
       .post("/api/newsLetter", { email })
       .then((data) => {
-        console.log(data);
         if (data.data.status === "success") {
           handleServerResponse(true);
         }
       })
       .catch((error) => {
-        console.log(error);
         handleServerResponse(false);
       });
   };

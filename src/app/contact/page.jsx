@@ -103,7 +103,7 @@ export default function Contact({}) {
         <div className="flex-1">
           <form
             onSubmit={handleOnSubmit}
-            className="grid gap-y-4 px-4 max-w-3xl pt-4"
+            className="grid gap-y-4 px-4 max-w-3xl pt-8"
           >
             <label
               htmlFor="tel"
