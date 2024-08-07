@@ -95,7 +95,7 @@ export default function Contact({}) {
       </div>
       <div className="bg-[#3C5B6F] drop-shadow-2xl">
         <h1 className="text-3xl pb-4 text-white text-center shadow-xl font-semibold pl-4 pt-4">
-          Contactez nous
+          Contacter nous
         </h1>
       </div>
 
