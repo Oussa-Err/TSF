@@ -34,8 +34,8 @@ const nextConfig = {
                         value: 'origin-when-cross-origin'
                     },
                     {
-                        key: 'Content-Security-Policy',
-                        value: 'script-src \'self\''
+                        key: 'Content-Security-Policy-Report-Only',
+                        value: 'default-src https: \'unsafe-inline\' \'unsafe-eval\''
                     }
                 ],
             },
