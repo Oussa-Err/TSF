@@ -32,6 +32,10 @@ const nextConfig = {
                     {
                         key: 'Referrer-Policy',
                         value: 'origin-when-cross-origin'
+                    },
+                    {
+                        key: 'Content-Security-Policy',
+                        value: 'script-src \'self\''
                     }
                 ],
             },
@@ -40,7 +44,7 @@ const nextConfig = {
                 headers: [
                     {
                         key: "Access-Control-Allow-Origin",
-                        value: "*", 
+                        value: "https://tsf-foundation.vercel.app/", 
                     },
                     {
                         key: "Access-Control-Allow-Methods",

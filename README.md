@@ -26,3 +26,6 @@ This project showcases a variety of technical skills, including:
 - **API Integration**: Making and handling HTTP requests with Axios.
 - **Animation and UI Design**: Creating interactive and visually appealing interfaces with Framer Motion and React-Bootstrap.
 - **Modern JavaScript**: Leveraging ES6+ features and React for a robust development experience.
+
+## License
+This project is licensed under the MIT License.
