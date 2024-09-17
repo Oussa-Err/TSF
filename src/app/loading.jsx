@@ -1,15 +1,10 @@
 const Loading = () => {
   return (
-    <div className="flex justify-center ">
-      <div className="bg-slate-700 h-[7rem] w-72 rounded-lg flex flex-col items-center justify-center">
-        <div className="lds-ring">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
+    <>
+      <div className="flex justify-center items-center h-full">
+        <div className="inline-block animate-spin rounded-full h-20 w-20 border-t-2 border-b-2 border-[--primary-text-color]"></div>
       </div>
-    </div>
+    </>
   );
 };
 
