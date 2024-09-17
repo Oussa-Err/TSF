@@ -81,22 +81,22 @@ const Qui = () => {
           />
         </div>
 
-        <div className="flex flex-col justify-center items-center mt-4 ">
-          <div className="md:w-2/4 relative bottom-0 bg-white p-8 pt-4 md:rounded-lg">
-            <h1 className="text-[1.5rem] md:text-[2rem] text-center font-extrabold pt-4">
+        <div className="flex bg-darkerBg flex-col md:my-10 md:py-14 relative sm:-left-16 md:-left-24 lg:-left-[8rem] lg:w-4/5 self-start  text-white font-sans font-light justify-center items-center md:items-start md:pl-8 shadow-2xl">
+          <div>
+            <h1 className="text-[2rem] text-center font-extrabold pt-4">
               Notre Vision pour l'Avenir
             </h1>
-            <div className="h-1 bg-orange-500 rounded-lg mb-4"></div>
-            <p className="px-2 md:p-0 font-serif font-bold md:text-center pt-4">
-              Au sein de la Fondation TSF, nos membres et partenaires partagent
-              une vision commune. Nous aspirons à contribuer à la croissance
-              économique, sociale et technologique du Maroc, tout en laissant
-              une empreinte positive sur le continent africain dans son
-              ensemble. Notre dévouement à l'innovation, à la recherche, à
-              l'éducation et à l'impact positif transcende les barrières
-              géographiques et disciplinaires.
-            </p>
+            <div className="h-1 bg-titlesBg  rounded-lg mb-4"></div>
           </div>
+          <p className="sm:text-center md:text-justify py-4 px-4">
+            Au sein de la Fondation TSF, nos membres et partenaires partagent
+            une vision commune. Nous aspirons à contribuer à la croissance
+            économique, sociale et technologique du Maroc, tout en laissant une
+            empreinte positive sur le continent africain dans son ensemble.
+            Notre dévouement à l'innovation, à la recherche, à l'éducation et à
+            l'impact positif transcende les barrières géographiques et
+            disciplinaires.
+          </p>
         </div>
       </div>
     </>

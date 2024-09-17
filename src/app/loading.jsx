@@ -8,9 +8,6 @@ const Loading = () => {
           <div></div>
           <div></div>
         </div>
-        <div className="rounded-lg flex justify-center items-center">
-          <div className="text-white">Chargement... Veuillez patienter.</div>
-        </div>
       </div>
     </div>
   );

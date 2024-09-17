@@ -13,17 +13,16 @@ export default async function News() {
   }, []);
 
   const setPageHandler = (no) => {
-    if (no>0 && no<=Math.round(newsItem.length/4) && no !== page)
-     setPage(no)
-  }
+    if (no > 0 && no <= Math.round(newsItem.length / 4) && no !== page)
+      setPage(no);
+  };
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
-
 
   return (
     <div className="sm:pr-4 ">
@@ -49,15 +48,15 @@ export default async function News() {
                   alt="f"
                 />
               </Link>
-              <div className="flex-1 flex flex-col items-start py-4 px-3 bg-stone-300">
+              <div className="flex-1 w-full flex flex-col items-start py-4 px-3 bg-stone-300">
                 <small className="text-slate-600 font-mono pb-4 lg:px-20">
                   {news.date}
                 </small>
                 <p className="lg:px-20 mt-5 font-bold text-blue-950 text-xl">
                   {news.title}
                 </p>
-                <p className="lg:px-24 my-5 text-sm font-thin text-slate-600">
-                  {'- ' + news.description.slice(0, 150) + "...."}
+                <p className="lg:px-20 my-5 text-sm font-thin text-slate-600">
+                  {news.description[0].split(":")[1].slice(0, 100) + "...."}
                 </p>
                 <Link href={`/tsf/news/${news.id}`}>
                   <button
@@ -74,19 +73,31 @@ export default async function News() {
         {newsItem.length > 0 && (
           <ul className=" flex justify-center item  -space-x-px text-sm">
             <li
-                className={page === 1? 'hidden' : ` cursor-pointer flex items-center justify-center px-3 h-8 ml-0 leading-tight border-gray-300 rounded-l-lg bg-[#948979]  hover:bg-gray-700 text-white`}
-                onClick={() => {setPageHandler(page - 1), scrollToTop()}}
-              >
-                précédent
-              </li>
+              className={
+                page === 1
+                  ? "hidden"
+                  : ` cursor-pointer flex items-center justify-center px-3 h-8 ml-0 leading-tight border-gray-300 rounded-l-lg bg-[#948979]  hover:bg-gray-700 text-white`
+              }
+              onClick={() => {
+                setPageHandler(page - 1), scrollToTop();
+              }}
+            >
+              précédent
+            </li>
 
             {[...Array(Math.round(newsItem.length / 4))].map((_, i) => {
               return (
                 <li
-                aria-current={page}
-                  className={page === i+1 ?`flex items-center justify-center px-3 h-8 border-gray-300 bg-[#DFD0B8] text-blue-700`: ' cursor-pointer flex items-center justify-center px-3 h-8 leading-tight  bg-[#948979] hover:bg-gray-700 text-white'}
+                  aria-current={page}
+                  className={
+                    page === i + 1
+                      ? `flex items-center justify-center px-3 h-8 border-gray-300 bg-[#DFD0B8] text-blue-700`
+                      : " cursor-pointer flex items-center justify-center px-3 h-8 leading-tight  bg-[#948979] hover:bg-gray-700 text-white"
+                  }
                   key={i}
-                  onClick={() => {setPageHandler(i + 1), scrollToTop()}}
+                  onClick={() => {
+                    setPageHandler(i + 1), scrollToTop();
+                  }}
                 >
                   {i + 1}
                 </li>
@@ -94,8 +105,14 @@ export default async function News() {
             })}
             <li>
               <li
-                className={page === (Math.round(newsItem.length / 4))? 'hidden' : ` cursor-pointer flex items-center justify-center px-3 h-8 leading-tight bg-[#948979] hover:bg-gray-700 text-white`}
-                onClick={() => {setPageHandler(page + 1), scrollToTop()}}
+                className={
+                  page === Math.round(newsItem.length / 4)
+                    ? "hidden"
+                    : ` cursor-pointer flex items-center justify-center px-3 h-8 leading-tight bg-[#948979] hover:bg-gray-700 text-white`
+                }
+                onClick={() => {
+                  setPageHandler(page + 1), scrollToTop();
+                }}
               >
                 suivant
               </li>

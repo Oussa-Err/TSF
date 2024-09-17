@@ -6,7 +6,14 @@
         ],
         "title": "Notre Fondation Scientifiques Marocains à l'Etranger Obtient Avantages et Privilèges pour Accueillir et Accompagner ses membres à notre Maison Commune le Maroc",
         "date": "14 Aout 2023 / TSF Foundation",
-        "description": "Nous sommes ravis de partager avec vous un événement captivant! Notre Fondation des Scientifiques Marocains à l'Étranger joue un rôle essentiel dans l'établissement de liens privilégiés entre le Maroc et les esprits scientifiques internationaux. Grâce à nos partenariats précieux avec des établissements renommés tels que le Complexe Diamond Vert Fès, l'Hôtel Michlifen Ifrane, et l'Hôtel Sofitel Rabat, ainsi que d'autres établissements de prestige, nos membres ont l'opportunité de vivre une expérience exceptionnelle au Maroc. Profitez d'avantages exclusifs, d'un accompagnement personnalisé, et plongez dans la riche culture marocaine. Nous vous invitons à vous joindre à nous pour un voyage passionnant où la science et la culture se rencontrent, avec d'incroyables opportunités qui se dessinent à l'horizon. De plus, découvrez également notre poster exclusif qui accompagne cet événement exceptionnel!"
+        "description": [
+            ":Nous sommes ravis de partager avec vous un événement captivant!",
+            ":Notre Fondation des Scientifiques Marocains à l'Étranger joue un rôle essentiel dans l'établissement de liens privilégiés entre le Maroc et les esprits scientifiques internationaux.",
+            ":Grâce à nos partenariats précieux avec des établissements renommés tels que le Complexe Diamond Vert Fès, l'Hôtel Michlifen Ifrane, et l'Hôtel Sofitel Rabat, ainsi que d'autres établissements de prestige, nos membres ont l'opportunité de vivre une expérience exceptionnelle au Maroc.",
+            ":Profitez d'avantages exclusifs, d'un accompagnement personnalisé, et plongez dans la riche culture marocaine.",
+            ":Nous vous invitons à vous joindre à nous pour un voyage passionnant où la science et la culture se rencontrent, avec d'incroyables opportunités qui se dessinent à l'horizon.",
+            ":De plus, découvrez également notre poster exclusif qui accompagne cet événement exceptionnel!"
+        ]
     },
     {
         "id": 1,
@@ -15,7 +22,17 @@
         ],
         "title": "Réunion club Fondateur Bien-Etre",
         "date": "03 Aout 2023 / By TSF Foundation",
-        "description": "Un rassemblement pour célébrer le bien-être et l'épanouissement personnel Le Club Fondateur Bien-Etre a organisé une réunion pour ses membres afin de promouvoir le bien-être et l'épanouissement personnel. Cette réunion a été l'occasion pour les participants de se retrouver, de partager leurs expériences et de découvrir de nouvelles pratiques pour améliorer leur qualité de vie. Un programme riche et varié Le programme de la réunion était riche et varié. Les participants ont pu assister à des conférences sur des thèmes tels que la nutrition, la gestion du stress et la méditation. Ils ont également pu participer à des ateliers pratiques de yoga, de Pilates et de sophrologie. Des moments de convivialité et d'échange La réunion a également été l'occasion pour les membres du Club Fondateur Bien-Etre de se détendre et de se divertir. Ils ont pu profiter d'un buffet composé de produits sains et savoureux, et ont participé à des jeux et animations."
+        "description": [
+            ":Un rassemblement pour célébrer le bien-être et l'épanouissement personnel.",
+            ":Le Club Fondateur Bien-Etre a organisé une réunion pour ses membres afin de promouvoir le bien-être et l'épanouissement personnel.",
+            ": Un programme riche et varié :Cette réunion a été l'occasion pour les participants de se retrouver, de partager leurs expériences et de découvrir de nouvelles pratiques pour améliorer leur qualité de vie.",
+            ":Le programme de la réunion était riche et varié.",
+            ":Les participants ont pu assister à des conférences sur des thèmes tels que la nutrition, la gestion du stress et la méditation.",
+            ":Ils ont également pu participer à des ateliers pratiques de yoga, de Pilates et de sophrologie.",
+            ":Des moments de convivialité et d'échange.",
+            ":La réunion a également été l'occasion pour les membres du Club Fondateur Bien-Etre de se détendre et de se divertir.",
+            ":Ils ont pu profiter d'un buffet composé de produits sains et savoureux, et ont participé à des jeux et animations."
+        ]
     },
     {
         "id": 2,
@@ -24,7 +41,13 @@
         ],
         "title": "Cérémonie en hommage aux champions de Foot de Sefrou",
         "date": "19 juillet 2023 / By TSF Foundation",
-        "description": "La ville de Sefrou s'apprête à vivre un moment exceptionnel en honorant ses champions de football locaux lors d'une cérémonie grandiose. Le football occupe une place particulière dans le cœur des Séfrouis, et la ville possède une riche histoire de formation de joueurs d'exception. Ces champions ont non seulement fait briller le nom de leur ville, mais ont également inspiré de nombreux jeunes à poursuivre leurs rêves sportifs. Au-delà de la célébration des champions, cet événement met en lumière l'esprit sportif, le travail d'équipe et la détermination. Il rappelle que tout est possible avec de la passion et de la persévérance."
+        "description": [
+            ":La ville de Sefrou s'apprête à vivre un moment exceptionnel en honorant ses champions de football locaux lors d'une cérémonie grandiose.",
+            ":Le football occupe une place particulière dans le cœur des Séfrouis, et la ville possède une riche histoire de formation de joueurs d'exception.",
+            ":Ces champions ont non seulement fait briller le nom de leur ville, mais ont également inspiré de nombreux jeunes à poursuivre leurs rêves sportifs.",
+            ":Au-delà de la célébration des champions, cet événement met en lumière l'esprit sportif, le travail d'équipe et la détermination.",
+            ":Il rappelle que tout est possible avec de la passion et de la persévérance."
+        ]
     },
     {
         "id": 3,
@@ -33,7 +56,15 @@
         ],
         "title": "Sefrou au Service de la Transition Ecologique et Energétique",
         "date": "08 Juillet 2023 / By TSF Foundation",
-        "description": "Sefrou, ville empreinte d'histoire et de vitalité culturelle, Exploitation des énergies renouvelables : Des panneaux solaires ornent les toits, captant l'énergie généreuse du soleil pour alimenter les foyers et les entreprises. Des éoliennes s'élèvent gracieusement sur les collines, produisant une énergie propre qui alimente la croissance de la ville. Promotion des pratiques écologiques : Des modes de transport durables tels que le vélo et les véhicules électriques gagnent du terrain, réduisant la dépendance aux combustibles fossiles et améliorant la qualité de l'air. Les espaces verts prospèrent, offrant des oasis naturelles au cœur de la ville. Adoption d'un mode de vie durable : Les habitants adoptent activement des pratiques éco-responsables, telles que la conservation de l'eau, la réduction des déchets et une consommation énergétique responsable. Les entreprises locales embrassent des pratiques durables, minimisant leur empreinte environnementale."
+        "description": [
+            ":Sefrou, ville empreinte d'histoire et de vitalité culturelle.",
+            ":Exploitation des énergies renouvelables : Des panneaux solaires ornent les toits, captant l'énergie généreuse du soleil pour alimenter les foyers et les entreprises.",
+            ":Des éoliennes s'élèvent gracieusement sur les collines, produisant une énergie propre qui alimente la croissance de la ville.",
+            ":Promotion des pratiques écologiques : Des modes de transport durables tels que le vélo et les véhicules électriques gagnent du terrain, réduisant la dépendance aux combustibles fossiles et améliorant la qualité de l'air.",
+            ":Les espaces verts prospèrent, offrant des oasis naturelles au cœur de la ville.",
+            ":Adoption d'un mode de vie durable : Les habitants adoptent activement des pratiques éco-responsables, telles que la conservation de l'eau, la réduction des déchets et une consommation énergétique responsable.",
+            ":Les entreprises locales embrassent des pratiques durables, minimisant leur empreinte environnementale."
+        ]
     },
     {
         "id": 4,
@@ -42,7 +73,11 @@
         ],
         "title": "Rencontre Ministre Benmoussa Chakib et Conseil Scientifique de notre Fondation",
         "date": "07 juillet 2023 / By TSF Foundation",
-        "description": "Des échanges riches et fructueux Les échanges entre le ministre et les membres du Conseil scientifique ont été riches et fructueux. Les deux parties ont évoqué les défis auxquels est confronté le système éducatif marocain, notamment en ce qui concerne la qualité de l'enseignement et la formation des enseignants. Elles ont également discuté des opportunités offertes par la recherche scientifique pour le développement du pays. Des perspectives encourageantes Le ministre Benmoussa a réitéré son engagement à renforcer le système éducatif marocain et à faire de la recherche scientifique une priorité nationale. Il a également salué le travail du Conseil scientifique de la Fondation trinationale des scientifiques à l'étranger et a exprimé sa confiance en sa contribution à l'édification d'un Maroc prospère et innovant. Une collaboration renforcée La rencontre entre le ministre Benmoussa et le Conseil scientifique a permis de jeter les bases d'une collaboration renforcée entre le ministère de l'Education nationale et la Fondation trinationale des scientifiques à l'étranger. Cette collaboration permettra de mettre en œuvre des projets concrets visant à améliorer la qualité de l'éducation et à promouvoir la recherche scientifique au Maroc."
+        "description": [
+            "Des échanges riches et fructueux : Les échanges entre le ministre et les membres du Conseil scientifique ont été riches et fructueux. Les deux parties ont évoqué les défis auxquels est confronté le système éducatif marocain, notamment en ce qui concerne la qualité de l'enseignement et la formation des enseignants.",
+            ":Le ministre Benmoussa a réitéré son engagement à renforcer le système éducatif marocain et à faire de la recherche scientifique une priorité nationale. Il a également salué le travail du Conseil scientifique de la Fondation trinationale des scientifiques à l'étranger et a exprimé sa confiance en sa contribution à l'édification d'un Maroc prospère et innovant.",
+            "Une collaboration renforcée : La rencontre entre le ministre Benmoussa et le Conseil scientifique a permis de jeter les bases d'une collaboration renforcée entre le ministère de l'Éducation nationale et la Fondation trinationale des scientifiques à l'étranger. Cette collaboration permettra de mettre en œuvre des projets concrets visant à améliorer la qualité de l'éducation et à promouvoir la recherche scientifique au Maroc."
+        ]
     },
     {
         "id": 5,
@@ -53,6 +88,14 @@
         ],
         "title": "Fondation Benghali Chakir Alaoui, a organisé la Journée Scientifique Ecole Guigou",
         "date": "06 Juin 2023 / By TSF Foundation",
-        "description": "Bonjour de l'école de Guigou, Ce Samedi 24 juin à 10H30 a commencé la journée Scientifique Ecole de Guigou: - Discours des 3 Directeurs Provincial My Elhassan Oubaidi, Actuel Younes El Jamali et l'ancien Directeur Mr Mrabet. Le Directeur Provincial a cité les Souvenirs inoubliables de Feu le Directeur My Abderrahmane Kamal, qui distribuait des Aides - Lecture par les enfants  de la Fatiha au nom de Feu le Directeur My Abderrahmane Kamal - Distribution des cadeaux aux enfants méritant qui ont les meilleures moyennes. - La Fondation Benghali Chakir Alaoui a distribué  les Cadeaux à 30 élèves les meilleurs - Présentation aux enseignants et aux familles du Projet Africa Digital Farming School pour apprendre aux enfants et adultes les innovations technologiques en Agriculture."
+        "description": [
+            ":Bonjour de l'école de Guigou, Ce Samedi 24 juin à 10H30 a commencé la journée Scientifique Ecole de Guigou:",
+            ":Discours des 3 Directeurs Provincial My Elhassan Oubaidi, Actuel Younes El Jamali et l'ancien Directeur Mr Mrabet.",
+            ":Le Directeur Provincial a cité les Souvenirs inoubliables de Feu le Directeur My Abderrahmane Kamal, qui distribuait des Aides.",
+            ":Lecture par les enfants de la Fatiha au nom de Feu le Directeur My Abderrahmane Kamal.",
+            ":Distribution des cadeaux aux enfants méritants ayant les meilleures moyennes.",
+            ":La Fondation Benghali Chakir Alaoui a distribué les cadeaux à 30 élèves les meilleurs.",
+            ":Présentation du Projet Africa Digital Farming School aux enseignants et aux familles pour apprendre aux enfants et adultes les innovations technologiques en Agriculture."
+        ]
     }
 ]
