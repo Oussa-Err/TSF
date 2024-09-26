@@ -4,13 +4,20 @@
 
 The Foundation of Moroccan Scientists Abroad consists of researchers, professors, experts, builders, and entrepreneurs who respond to the formidable challenges of Morocco and Africa. These challenges include Educational Excellence and innovation in all human activities, as well as the sustainable, connected, and accessible city. The TSF Foundation of Moroccan Scientists Abroad is dedicated to serving this excellence!
 
+<img src='/public/tsf-home.png' alt='screenShot'>
+<img src='/public/contact.png' alt='screenShot'>
+<img src='/public/know-us.png' alt='screenShot'>
+<img src='/public/news.png' alt='screenShot'>
+
 ## Table of Contents
 
 - [Dependencies](#dependencies)
 - [Skills Implemented](#skills-implemented)
 
 ## Dependencies
+
 This project uses several major dependencies including:
+
 - Next.js: For building dynamic web applications.
 - TailwindCSS: For styling the application.
 - Mongoose: For MongoDB database interactions.
@@ -19,7 +26,9 @@ This project uses several major dependencies including:
 - React-Bootstrap: For UI components.
 
 ## Skills Implemented
+
 This project showcases a variety of technical skills, including:
+
 - **Full-Stack Development**: Building both front-end and back-end components.
 - **Responsive Design**: Ensuring the application works well on various devices using TailwindCSS.
 - **Database Management**: Interacting with MongoDB using Mongoose for efficient data handling.
@@ -28,4 +37,5 @@ This project showcases a variety of technical skills, including:
 - **Modern JavaScript**: Leveraging ES6+ features and React for a robust development experience.
 
 ## License
+
 This project is licensed under the MIT License.

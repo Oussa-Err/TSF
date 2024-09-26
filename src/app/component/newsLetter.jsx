@@ -29,7 +29,6 @@ const NewsLetter = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     setStatus({
       submitted: false,
       submitting: true,
